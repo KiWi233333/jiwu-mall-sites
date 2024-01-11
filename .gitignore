@@ -16,4 +16,3 @@ dist
 # .env.test
 # composables/utils/useBaseUrl.ts
 .unlighthouse
-.doc/
