@@ -1,0 +1,19 @@
+node_modules
+*.log
+dist
+.output
+.output*
+.generateOutput
+.generateOutput.*
+.nuxt
+.env
+.idea/
+.generateOutput
+.spa.*
+.dist
+# url
+# .env.production
+# .env.test
+# composables/utils/useBaseUrl.ts
+.unlighthouse
+.doc/
