@@ -24,14 +24,11 @@
 
 ![钱包](./.doc/wallet.png)
 
-## ⏳ 起步 | Project Setup 
+## ⏳ 起步 | Project Setup  
 
-```sh
-# node 版本 >= 18
-npm install -g pnpm
-pnpm install
-# 一键运行
-npm run install
+```sh 
+# run prod 运行生产环境
+node ./server/index.mjs
 ```
 
 ### ✨ 开发
@@ -48,49 +45,7 @@ pnpm run build
 
 ### 🎊 部署
 ```sh
-node .output/server/index.mjs
-```
-
-```nginx
-#  jiwu.kiwi2333.top;
-server {  
-    listen 80;  
-    listen [::]:80;	#监听ipv6
-    server_name jiwu.kiwi2333.top; 
-    rewrite ^(.*)$ https://$host$1 permanent;	#rewrite跳转 
-  }
-  
-server
-    {      
-      listen 443 ssl http2;
-      listen [::]:443 ssl http2;
-      # listen 443 http3 reuseport;  # UDP listener for QUIC+HTTP/3
-      # 域名，多个以空格分开
-      server_name  jiwu.kiwi2333.top;
-      # ssl证书地址
-      ssl_certificate /www/wwwroot/java_node_ssl/.kiwi2333.top/fullchain.pem;
-      ssl_certificate_key /www/wwwroot/java_node_ssl/.kiwi2333.top/cert.key;# key文件的路径
-      
-      # ssl验证相关配置
-      ssl_session_timeout 5m;    #缓存有效期
-      ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;    #加密算法
-      ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;    #安全链接可选的加密协议
-      ssl_prefer_server_ciphers on;   #使用服务器端的首选算法
-      # 设置是否允许 cookie 传输
-      add_header Access-Control-Allow-Credentials true;
-      # 允许请求地址跨域 * 做为通配符
-      add_header Access-Control-Allow-Origin * always;
-      # 允许跨域的请求方法
-      add_header Access-Control-Allow-Methods 'GET, POST, PUT,DELET,OPTIONS';
-      add_header Access-Control-Allow-Headers 'DNT,X-Mx-ReqToke,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization';
-      if ($request_method = 'OPTIONS') {
-          return 204;
-      } 
-      location / {
-          proxy_pass http://127.0.0.1:3000;
-      }
-    }
-  
+node ./server/index.mjs
 ```
 
 ### ❌ pnpm install error

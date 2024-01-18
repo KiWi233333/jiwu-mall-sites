@@ -1,0 +1,1 @@
+import{hd as t,gW as l,ho as m,hz as r}from"./entry.HuYbGiLS.js";var b=t?t.isConcatSpreadable:void 0;function x(n){return l(n)||m(n)||!!(b&&n&&n[b])}function e(n,o,i,a,f){var h=-1,g=n.length;for(i||(i=x),f||(f=[]);++h<g;){var s=n[h];o>0&&i(s)?o>1?e(s,o-1,i,a,f):r(f,s):a||(f[f.length]=s)}return f}function F(n){var o=n==null?0:n.length;return o?e(n,1):[]}export{e as b,F as f};

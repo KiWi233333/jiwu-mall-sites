@@ -1,0 +1,12 @@
+const Line_vue_vue_type_style_index_0_scoped_52146557_lang = "/* Element Chalk Variables */\n.avatar[data-v-52146557] {\n  border-radius: 50%;\n  height: 6em;\n  width: 6em;\n}\n.avatar[data-v-52146557] .el-upload {\n  border-radius: 50%;\n  height: 6em;\n  overflow: hidden;\n  width: 6em;\n}\n.avatar[data-v-52146557] .el-upload .el-upload-dragger {\n  align-items: center;\n  border-radius: 50%;\n  border-width: 2px;\n  display: flex;\n  height: 6em;\n  justify-content: center;\n  overflow: hidden;\n  transition: .22s;\n  width: 6em;\n}\n\n/* stylelint-disable-next-line selector-class-pattern */\n.small-input[data-v-52146557] .el-input__wrapper {\n  box-shadow: none;\n}\n.small-input[data-v-52146557] .el-input__wrapper.is-focus {\n  box-shadow: 0 0 0 1px var(--el-input-foucs-border-color) inset;\n}\n.el-popper-init[data-v-52146557] {\n  padding: 2px 4px;\n}\n[data-v-52146557] .el-input .el-input__wrapper {\n  background-color: transparent;\n}";
+
+const PostLineSe_vue_vue_type_style_index_0_scoped_526b4ff4_lang = "/* Element Chalk Variables */\n.link-text[data-v-526b4ff4] {\n  cursor:pointer;font-size:0.9rem;opacity:0.8;transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:200ms;;\n}.link-text[data-v-526b4ff4]:hover{color:var(--el-color-info);opacity:1;}\n.tip-group:hover .toggle-tip[data-v-526b4ff4] {\n  display: none;\n}\n.tip-group:hover .data[data-v-526b4ff4] {\n  display: inline-block;\n}";
+
+const PostListSe_vue_vue_type_style_index_0_scoped_30990f34_lang = "/* Element Chalk Variables */\n[data-v-30990f34] .el-loading-mask {\n  background-color: transparent;\n}";
+
+const Tabs_vue_vue_type_style_index_0_scoped_8b912226_lang = "/* Element Chalk Variables */\n.goods-tabs[data-v-8b912226] .el-tabs__item {\n  display: flex;\n  font-size: 1em;\n  justify-content: center;\n  margin-right: 1em;\n  padding: 1.4em 1.2em;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n          user-select: none;\n}";
+
+const infoStyles_FsXk2__s = [Line_vue_vue_type_style_index_0_scoped_52146557_lang, PostLineSe_vue_vue_type_style_index_0_scoped_526b4ff4_lang, PostListSe_vue_vue_type_style_index_0_scoped_30990f34_lang, Tabs_vue_vue_type_style_index_0_scoped_8b912226_lang];
+
+export { infoStyles_FsXk2__s as default };
+//# sourceMappingURL=info-styles.FsXk2__s.mjs.map

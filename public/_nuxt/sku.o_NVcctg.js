@@ -1,0 +1,1 @@
+import{u as s}from"./fetch.3IR0ILJ_.js";import{t,o as u}from"./entry.HuYbGiLS.js";function d(o){return s(`${t}/goods/sku?gid=${o}`,"$AfkcphgTcz")}function a(o){return u.post("/goods/sku",{ids:[...o]})}export{a,d as g};

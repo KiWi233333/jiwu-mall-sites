@@ -1,0 +1,1 @@
+import{u as e}from"./fetch.3IR0ILJ_.js";import{t as n}from"./entry.HuYbGiLS.js";function r(){return e(()=>`${n}/event/list`,"$xvkmTfuJqN")}function u(t){return e(()=>`${n}/event/info/${t}`,"$RCOJD6duVz")}function i(t){return e(()=>`${n}/event/goods/sku/${t}`,"$T6xeGbxDlZ")}export{i as a,r as b,u as g};
