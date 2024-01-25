@@ -24,6 +24,12 @@
 
 ![钱包](./.doc/wallet.png)
 
+![聊天](./.doc/chat.png)
+
+![聊天](./.doc/chat1.png)
+
+![聊天 - 好友](./.doc/chat2.png)
+
 ## ⏳ 起步 | Project Setup  
 
 ```sh 

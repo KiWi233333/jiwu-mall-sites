@@ -1,6 +1,6 @@
 import * as vue from 'vue';
-import { hasInjectionContext, getCurrentInstance, version, ref, watchEffect, watch, inject, toRef, isRef, warn as warn$1, unref, computed, defineComponent, openBlock, createElementBlock, mergeProps, renderSlot, onUnmounted, createBlock, resolveDynamicComponent, withCtx, Fragment, normalizeClass, createCommentVNode, provide, reactive, shallowReactive, h, Suspense, nextTick, Transition, useSSRContext, createTextVNode, createElementVNode, useSlots, Text, createVNode as createVNode$1, createApp, effectScope, isReactive, toRaw, isVNode, getCurrentScope, onScopeDispose, defineAsyncComponent, onErrorCaptured, onServerPrefetch, shallowRef, isReadonly, toRefs, markRaw, isShallow } from 'vue';
-import { d as useRuntimeConfig$1, $ as $fetch$1, w as withQuery, n as hasProtocol, p as parseURL, o as isScriptProtocol, j as joinURL, h as createError$1, q as defu, t as sanitizeStatusCode, v as createHooks, x as klona, y as parse$1, z as getRequestHeader, m as destr, A as isEqual, B as setCookie, C as getCookie, D as deleteCookie } from '../nitro/node-server.mjs';
+import { version, ref, watchEffect, watch, getCurrentInstance, hasInjectionContext, inject, toRef, shallowRef, onServerPrefetch, computed, toValue, reactive, warn as warn$1, unref, defineComponent, openBlock, createElementBlock, mergeProps, renderSlot, onUnmounted, createBlock, resolveDynamicComponent, withCtx, Fragment, normalizeClass, createCommentVNode, provide, shallowReactive, useSSRContext, h, Suspense, nextTick, Transition, createTextVNode, isRef, createElementVNode, useSlots, Text, createVNode as createVNode$1, createApp, effectScope, isReactive, toRaw, isVNode, defineAsyncComponent, onErrorCaptured, getCurrentScope, onScopeDispose, isReadonly, toRefs, markRaw, isShallow } from 'vue';
+import { d as useRuntimeConfig$1, $ as $fetch$1, w as withQuery, n as hasProtocol, p as parseURL, o as isScriptProtocol, j as joinURL, h as createError$1, k as hash, q as defu, t as sanitizeStatusCode, v as createHooks, x as klona, y as parse$1, z as getRequestHeader, m as destr, A as isEqual, B as setCookie, C as getCookie, D as deleteCookie } from '../nitro/node-server.mjs';
 import { getActiveHead } from 'unhead';
 import { defineHeadPlugin, composableNames, unpackMeta } from '@unhead/shared';
 import { RouterView, useRoute as useRoute$1, createMemoryHistory, createRouter, START_LOCATION } from 'vue-router';
@@ -27045,12 +27045,8 @@ const createError = (error2) => {
   });
   return nuxtError;
 };
-const __nuxt_page_meta$n = {
-  key: (route) => route.path,
-  layout: false
-};
 const __nuxt_page_meta$m = {
-  key: (route) => route.fullPath,
+  key: (route) => route.path,
   layout: false
 };
 const __nuxt_page_meta$l = {
@@ -27145,36 +27141,38 @@ const __nuxt_page_meta = {
 };
 const _routes = [
   {
-    name: (__nuxt_page_meta$n == null ? void 0 : __nuxt_page_meta$n.name) ?? "all",
-    path: (__nuxt_page_meta$n == null ? void 0 : __nuxt_page_meta$n.path) ?? "/:all(.*)*",
-    meta: __nuxt_page_meta$n || {},
-    alias: (__nuxt_page_meta$n == null ? void 0 : __nuxt_page_meta$n.alias) || [],
-    redirect: (__nuxt_page_meta$n == null ? void 0 : __nuxt_page_meta$n.redirect) || void 0,
-    component: () => import('./_nuxt/_...all_-LhCU85kv.mjs').then((m) => m.default || m)
-  },
-  {
-    name: (__nuxt_page_meta$m == null ? void 0 : __nuxt_page_meta$m.name) ?? "chat-friend",
-    path: (__nuxt_page_meta$m == null ? void 0 : __nuxt_page_meta$m.path) ?? "/chat/friend",
+    name: (__nuxt_page_meta$m == null ? void 0 : __nuxt_page_meta$m.name) ?? "all",
+    path: (__nuxt_page_meta$m == null ? void 0 : __nuxt_page_meta$m.path) ?? "/:all(.*)*",
     meta: __nuxt_page_meta$m || {},
     alias: (__nuxt_page_meta$m == null ? void 0 : __nuxt_page_meta$m.alias) || [],
     redirect: (__nuxt_page_meta$m == null ? void 0 : __nuxt_page_meta$m.redirect) || void 0,
-    component: () => import('./_nuxt/friend-UGvjFhEi.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/_...all_-58cpAY3L.mjs').then((m) => m.default || m)
   },
   {
-    name: (__nuxt_page_meta$l == null ? void 0 : __nuxt_page_meta$l.name) ?? "chat",
-    path: (__nuxt_page_meta$l == null ? void 0 : __nuxt_page_meta$l.path) ?? "/chat",
+    name: (__nuxt_page_meta$l == null ? void 0 : __nuxt_page_meta$l.name) ?? "chat-friend",
+    path: (__nuxt_page_meta$l == null ? void 0 : __nuxt_page_meta$l.path) ?? "/chat/friend",
     meta: __nuxt_page_meta$l || {},
     alias: (__nuxt_page_meta$l == null ? void 0 : __nuxt_page_meta$l.alias) || [],
     redirect: (__nuxt_page_meta$l == null ? void 0 : __nuxt_page_meta$l.redirect) || void 0,
-    component: () => import('./_nuxt/index-O9r7w_kL.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/friend-gR2sdjeI.mjs').then((m) => m.default || m)
   },
   {
-    name: (__nuxt_page_meta$k == null ? void 0 : __nuxt_page_meta$k.name) ?? "chat-service",
-    path: (__nuxt_page_meta$k == null ? void 0 : __nuxt_page_meta$k.path) ?? "/chat/service",
+    name: (__nuxt_page_meta$k == null ? void 0 : __nuxt_page_meta$k.name) ?? "chat",
+    path: (__nuxt_page_meta$k == null ? void 0 : __nuxt_page_meta$k.path) ?? "/chat",
     meta: __nuxt_page_meta$k || {},
     alias: (__nuxt_page_meta$k == null ? void 0 : __nuxt_page_meta$k.alias) || [],
     redirect: (__nuxt_page_meta$k == null ? void 0 : __nuxt_page_meta$k.redirect) || void 0,
-    component: () => import('./_nuxt/service-ZE9n4_cX.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-1Zpr1Kk6.mjs').then(function(n) {
+      return n.i;
+    }).then((m) => m.default || m)
+  },
+  {
+    name: "chat-setting",
+    path: "/chat/setting",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/setting-Pgw68NPd.mjs').then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta$j == null ? void 0 : __nuxt_page_meta$j.name) ?? "community-category-id",
@@ -27182,7 +27180,7 @@ const _routes = [
     meta: __nuxt_page_meta$j || {},
     alias: (__nuxt_page_meta$j == null ? void 0 : __nuxt_page_meta$j.alias) || [],
     redirect: (__nuxt_page_meta$j == null ? void 0 : __nuxt_page_meta$j.redirect) || void 0,
-    component: () => import('./_nuxt/_id_-6FUNXLeI.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/_id_-ZwJGzETu.mjs').then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta$i == null ? void 0 : __nuxt_page_meta$i.name) ?? "community-category",
@@ -27190,7 +27188,7 @@ const _routes = [
     meta: __nuxt_page_meta$i || {},
     alias: (__nuxt_page_meta$i == null ? void 0 : __nuxt_page_meta$i.alias) || [],
     redirect: (__nuxt_page_meta$i == null ? void 0 : __nuxt_page_meta$i.redirect) || void 0,
-    component: () => import('./_nuxt/index-tWJhgDeg.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-fgjfIgtn.mjs').then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta$h == null ? void 0 : __nuxt_page_meta$h.name) ?? "community-post-detail-id",
@@ -27198,7 +27196,7 @@ const _routes = [
     meta: __nuxt_page_meta$h || {},
     alias: (__nuxt_page_meta$h == null ? void 0 : __nuxt_page_meta$h.alias) || [],
     redirect: (__nuxt_page_meta$h == null ? void 0 : __nuxt_page_meta$h.redirect) || void 0,
-    component: () => import('./_nuxt/_id_-fvavIMeB.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/_id_-XmvgHVHy.mjs').then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta$g == null ? void 0 : __nuxt_page_meta$g.name) ?? "community-post-list",
@@ -27206,7 +27204,7 @@ const _routes = [
     meta: __nuxt_page_meta$g || {},
     alias: (__nuxt_page_meta$g == null ? void 0 : __nuxt_page_meta$g.alias) || [],
     redirect: (__nuxt_page_meta$g == null ? void 0 : __nuxt_page_meta$g.redirect) || void 0,
-    component: () => import('./_nuxt/list-ubq08CM2.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/list-eU1ZL64J.mjs').then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta$f == null ? void 0 : __nuxt_page_meta$f.name) ?? "community-post-new",
@@ -27214,7 +27212,7 @@ const _routes = [
     meta: __nuxt_page_meta$f || {},
     alias: (__nuxt_page_meta$f == null ? void 0 : __nuxt_page_meta$f.alias) || [],
     redirect: (__nuxt_page_meta$f == null ? void 0 : __nuxt_page_meta$f.redirect) || void 0,
-    component: () => import('./_nuxt/new-bIOXRWqv.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/new-XWPZxyhc.mjs').then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta$e == null ? void 0 : __nuxt_page_meta$e.name) ?? "event-detail-eid",
@@ -27222,7 +27220,7 @@ const _routes = [
     meta: __nuxt_page_meta$e || {},
     alias: (__nuxt_page_meta$e == null ? void 0 : __nuxt_page_meta$e.alias) || [],
     redirect: (__nuxt_page_meta$e == null ? void 0 : __nuxt_page_meta$e.redirect) || void 0,
-    component: () => import('./_nuxt/_eid_-JohCgioY.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/_eid_-2iCz7d7q.mjs').then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta$d == null ? void 0 : __nuxt_page_meta$d.name) ?? "goods-comments-id",
@@ -27230,7 +27228,7 @@ const _routes = [
     meta: __nuxt_page_meta$d || {},
     alias: (__nuxt_page_meta$d == null ? void 0 : __nuxt_page_meta$d.alias) || [],
     redirect: (__nuxt_page_meta$d == null ? void 0 : __nuxt_page_meta$d.redirect) || void 0,
-    component: () => import('./_nuxt/_id_-Z6qbW5Da.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/_id_-KS7qincj.mjs').then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta$c == null ? void 0 : __nuxt_page_meta$c.name) ?? "goods-detail-id",
@@ -27238,7 +27236,7 @@ const _routes = [
     meta: __nuxt_page_meta$c || {},
     alias: (__nuxt_page_meta$c == null ? void 0 : __nuxt_page_meta$c.alias) || [],
     redirect: (__nuxt_page_meta$c == null ? void 0 : __nuxt_page_meta$c.redirect) || void 0,
-    component: () => import('./_nuxt/_id_-xMnwTV-f.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/_id_-G5ZXjis3.mjs').then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta$b == null ? void 0 : __nuxt_page_meta$b.name) ?? "index",
@@ -27246,7 +27244,7 @@ const _routes = [
     meta: __nuxt_page_meta$b || {},
     alias: (__nuxt_page_meta$b == null ? void 0 : __nuxt_page_meta$b.alias) || [],
     redirect: (__nuxt_page_meta$b == null ? void 0 : __nuxt_page_meta$b.redirect) || void 0,
-    component: () => import('./_nuxt/index-pt04Jo-C.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-sntM9yD6.mjs').then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta$a == null ? void 0 : __nuxt_page_meta$a.name) ?? "order-comment-id",
@@ -27254,7 +27252,7 @@ const _routes = [
     meta: __nuxt_page_meta$a || {},
     alias: (__nuxt_page_meta$a == null ? void 0 : __nuxt_page_meta$a.alias) || [],
     redirect: (__nuxt_page_meta$a == null ? void 0 : __nuxt_page_meta$a.redirect) || void 0,
-    component: () => import('./_nuxt/_id_-pCVTqaZ0.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/_id_-dhbIAhIu.mjs').then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta$9 == null ? void 0 : __nuxt_page_meta$9.name) ?? "order-detail",
@@ -27262,7 +27260,7 @@ const _routes = [
     meta: __nuxt_page_meta$9 || {},
     alias: (__nuxt_page_meta$9 == null ? void 0 : __nuxt_page_meta$9.alias) || [],
     redirect: (__nuxt_page_meta$9 == null ? void 0 : __nuxt_page_meta$9.redirect) || void 0,
-    component: () => import('./_nuxt/detail-mhkoPQne.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/detail-ok9wBrxl.mjs').then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta$8 == null ? void 0 : __nuxt_page_meta$8.name) ?? "order-list",
@@ -27270,7 +27268,7 @@ const _routes = [
     meta: __nuxt_page_meta$8 || {},
     alias: (__nuxt_page_meta$8 == null ? void 0 : __nuxt_page_meta$8.alias) || [],
     redirect: (__nuxt_page_meta$8 == null ? void 0 : __nuxt_page_meta$8.redirect) || void 0,
-    component: () => import('./_nuxt/list-yce_47ch.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/list-YO-otgP6.mjs').then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta$7 == null ? void 0 : __nuxt_page_meta$7.name) ?? "search",
@@ -27278,7 +27276,7 @@ const _routes = [
     meta: __nuxt_page_meta$7 || {},
     alias: (__nuxt_page_meta$7 == null ? void 0 : __nuxt_page_meta$7.alias) || [],
     redirect: (__nuxt_page_meta$7 == null ? void 0 : __nuxt_page_meta$7.redirect) || void 0,
-    component: () => import('./_nuxt/index-TqBYo8BW.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-W1MDZqQ8.mjs').then((m) => m.default || m)
   },
   {
     name: "setting",
@@ -27286,7 +27284,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-CJeAiHZo.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-9i7UxYbQ.mjs').then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta$6 == null ? void 0 : __nuxt_page_meta$6.name) ?? "user-address",
@@ -27294,7 +27292,7 @@ const _routes = [
     meta: __nuxt_page_meta$6 || {},
     alias: (__nuxt_page_meta$6 == null ? void 0 : __nuxt_page_meta$6.alias) || [],
     redirect: (__nuxt_page_meta$6 == null ? void 0 : __nuxt_page_meta$6.redirect) || void 0,
-    component: () => import('./_nuxt/address-J48HZfLH.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/address-TjKtok5N.mjs').then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta$5 == null ? void 0 : __nuxt_page_meta$5.name) ?? "user-collect",
@@ -27302,7 +27300,7 @@ const _routes = [
     meta: __nuxt_page_meta$5 || {},
     alias: (__nuxt_page_meta$5 == null ? void 0 : __nuxt_page_meta$5.alias) || [],
     redirect: (__nuxt_page_meta$5 == null ? void 0 : __nuxt_page_meta$5.redirect) || void 0,
-    component: () => import('./_nuxt/collect-beRPZBUN.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/collect-wXQW4Vl5.mjs').then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta$4 == null ? void 0 : __nuxt_page_meta$4.name) ?? "user-info",
@@ -27310,7 +27308,7 @@ const _routes = [
     meta: __nuxt_page_meta$4 || {},
     alias: (__nuxt_page_meta$4 == null ? void 0 : __nuxt_page_meta$4.alias) || [],
     redirect: (__nuxt_page_meta$4 == null ? void 0 : __nuxt_page_meta$4.redirect) || void 0,
-    component: () => import('./_nuxt/info-ks1CwqLV.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/info-7A30iE7C.mjs').then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta$3 == null ? void 0 : __nuxt_page_meta$3.name) ?? "user-post",
@@ -27318,7 +27316,7 @@ const _routes = [
     meta: __nuxt_page_meta$3 || {},
     alias: (__nuxt_page_meta$3 == null ? void 0 : __nuxt_page_meta$3.alias) || [],
     redirect: (__nuxt_page_meta$3 == null ? void 0 : __nuxt_page_meta$3.redirect) || void 0,
-    component: () => import('./_nuxt/post-cR5NbO_u.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/post-869nT9bc.mjs').then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta$2 == null ? void 0 : __nuxt_page_meta$2.name) ?? "user-safe",
@@ -27326,7 +27324,7 @@ const _routes = [
     meta: __nuxt_page_meta$2 || {},
     alias: (__nuxt_page_meta$2 == null ? void 0 : __nuxt_page_meta$2.alias) || [],
     redirect: (__nuxt_page_meta$2 == null ? void 0 : __nuxt_page_meta$2.redirect) || void 0,
-    component: () => import('./_nuxt/safe-NEaTQmm_.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/safe-IgNhWwO0.mjs').then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta$1 == null ? void 0 : __nuxt_page_meta$1.name) ?? "user-shopcart",
@@ -27334,7 +27332,7 @@ const _routes = [
     meta: __nuxt_page_meta$1 || {},
     alias: (__nuxt_page_meta$1 == null ? void 0 : __nuxt_page_meta$1.alias) || [],
     redirect: (__nuxt_page_meta$1 == null ? void 0 : __nuxt_page_meta$1.redirect) || void 0,
-    component: () => import('./_nuxt/shopcart-eskicbMB.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/shopcart-6mOKazeE.mjs').then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta == null ? void 0 : __nuxt_page_meta.name) ?? "user-wallet",
@@ -27342,7 +27340,7 @@ const _routes = [
     meta: __nuxt_page_meta || {},
     alias: (__nuxt_page_meta == null ? void 0 : __nuxt_page_meta.alias) || [],
     redirect: (__nuxt_page_meta == null ? void 0 : __nuxt_page_meta.redirect) || void 0,
-    component: () => import('./_nuxt/wallet-Pf-5PLSO.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/wallet-Pj0pTNn_.mjs').then((m) => m.default || m)
   }
 ];
 const _wrapIf = (component, props, slots) => {
@@ -27964,6 +27962,117 @@ function defineStore(idOrOptions, setup, setupOptions) {
   useStore.$id = id;
   return useStore;
 }
+const isDefer = (dedupe) => dedupe === "defer" || dedupe === false;
+function useAsyncData(...args) {
+  var _a2;
+  const autoKey = typeof args[args.length - 1] === "string" ? args.pop() : void 0;
+  if (typeof args[0] !== "string") {
+    args.unshift(autoKey);
+  }
+  let [key, handler, options = {}] = args;
+  if (typeof key !== "string") {
+    throw new TypeError("[nuxt] [asyncData] key must be a string.");
+  }
+  if (typeof handler !== "function") {
+    throw new TypeError("[nuxt] [asyncData] handler must be a function.");
+  }
+  const nuxt = /* @__PURE__ */ useNuxtApp();
+  const getDefault = () => null;
+  const getDefaultCachedData = () => nuxt.isHydrating ? nuxt.payload.data[key] : nuxt.static.data[key];
+  options.server = options.server ?? true;
+  options.default = options.default ?? getDefault;
+  options.getCachedData = options.getCachedData ?? getDefaultCachedData;
+  options.lazy = options.lazy ?? false;
+  options.immediate = options.immediate ?? true;
+  options.deep = options.deep ?? asyncDataDefaults.deep;
+  options.dedupe = options.dedupe ?? "cancel";
+  const hasCachedData = () => ![null, void 0].includes(options.getCachedData(key));
+  if (!nuxt._asyncData[key] || !options.immediate) {
+    (_a2 = nuxt.payload._errors)[key] ?? (_a2[key] = null);
+    const _ref = options.deep ? ref : shallowRef;
+    nuxt._asyncData[key] = {
+      data: _ref(options.getCachedData(key) ?? options.default()),
+      pending: ref(!hasCachedData()),
+      error: toRef(nuxt.payload._errors, key),
+      status: ref("idle")
+    };
+  }
+  const asyncData = { ...nuxt._asyncData[key] };
+  asyncData.refresh = asyncData.execute = (opts = {}) => {
+    if (nuxt._asyncDataPromises[key]) {
+      if (isDefer(opts.dedupe ?? options.dedupe)) {
+        return nuxt._asyncDataPromises[key];
+      }
+      nuxt._asyncDataPromises[key].cancelled = true;
+    }
+    if ((opts._initial || nuxt.isHydrating && opts._initial !== false) && hasCachedData()) {
+      return Promise.resolve(options.getCachedData(key));
+    }
+    asyncData.pending.value = true;
+    asyncData.status.value = "pending";
+    const promise = new Promise(
+      (resolve, reject) => {
+        try {
+          resolve(handler(nuxt));
+        } catch (err) {
+          reject(err);
+        }
+      }
+    ).then((_result) => {
+      if (promise.cancelled) {
+        return nuxt._asyncDataPromises[key];
+      }
+      let result = _result;
+      if (options.transform) {
+        result = options.transform(_result);
+      }
+      if (options.pick) {
+        result = pick(result, options.pick);
+      }
+      nuxt.payload.data[key] = result;
+      asyncData.data.value = result;
+      asyncData.error.value = null;
+      asyncData.status.value = "success";
+    }).catch((error2) => {
+      if (promise.cancelled) {
+        return nuxt._asyncDataPromises[key];
+      }
+      asyncData.error.value = createError(error2);
+      asyncData.data.value = unref(options.default());
+      asyncData.status.value = "error";
+    }).finally(() => {
+      if (promise.cancelled) {
+        return;
+      }
+      asyncData.pending.value = false;
+      delete nuxt._asyncDataPromises[key];
+    });
+    nuxt._asyncDataPromises[key] = promise;
+    return nuxt._asyncDataPromises[key];
+  };
+  const initialFetch = () => asyncData.refresh({ _initial: true });
+  const fetchOnServer = options.server !== false && nuxt.payload.serverRendered;
+  if (fetchOnServer && options.immediate) {
+    const promise = initialFetch();
+    if (getCurrentInstance()) {
+      onServerPrefetch(() => promise);
+    } else {
+      nuxt.hook("app:created", async () => {
+        await promise;
+      });
+    }
+  }
+  const asyncDataPromise = Promise.resolve(nuxt._asyncDataPromises[key]).then(() => asyncData);
+  Object.assign(asyncDataPromise, asyncData);
+  return asyncDataPromise;
+}
+function pick(obj, keys2) {
+  const newObj = {};
+  for (const key of keys2) {
+    newObj[key] = obj[key];
+  }
+  return newObj;
+}
 const useStateKeyPrefix = "$s";
 function useState(...args) {
   const autoKey = typeof args[args.length - 1] === "string" ? args.pop() : void 0;
@@ -27997,6 +28106,93 @@ function useRequestEvent(nuxtApp = /* @__PURE__ */ useNuxtApp()) {
 function useRequestFetch() {
   var _a2;
   return ((_a2 = useRequestEvent()) == null ? void 0 : _a2.$fetch) || globalThis.$fetch;
+}
+function useFetch(request, arg1, arg2) {
+  const [opts = {}, autoKey] = typeof arg1 === "string" ? [{}, arg1] : [arg1, arg2];
+  const _request = computed(() => {
+    let r = request;
+    if (typeof r === "function") {
+      r = r();
+    }
+    return toValue(r);
+  });
+  const _key = opts.key || hash([autoKey, typeof _request.value === "string" ? _request.value : "", ...generateOptionSegments(opts)]);
+  if (!_key || typeof _key !== "string") {
+    throw new TypeError("[nuxt] [useFetch] key must be a string: " + _key);
+  }
+  if (!request) {
+    throw new Error("[nuxt] [useFetch] request is missing.");
+  }
+  const key = _key === autoKey ? "$f" + _key : _key;
+  if (!opts.baseURL && typeof _request.value === "string" && (_request.value[0] === "/" && _request.value[1] === "/")) {
+    throw new Error('[nuxt] [useFetch] the request URL must not start with "//".');
+  }
+  const {
+    server,
+    lazy,
+    default: defaultFn,
+    transform,
+    pick: pick2,
+    watch: watch2,
+    immediate,
+    getCachedData,
+    deep,
+    ...fetchOptions
+  } = opts;
+  const _fetchOptions = reactive({
+    ...fetchDefaults,
+    ...fetchOptions,
+    cache: typeof opts.cache === "boolean" ? void 0 : opts.cache
+  });
+  const _asyncDataOptions = {
+    server,
+    lazy,
+    default: defaultFn,
+    transform,
+    pick: pick2,
+    immediate,
+    getCachedData,
+    deep,
+    watch: watch2 === false ? [] : [_fetchOptions, _request, ...watch2 || []]
+  };
+  let controller;
+  const asyncData = useAsyncData(key, () => {
+    var _a2;
+    (_a2 = controller == null ? void 0 : controller.abort) == null ? void 0 : _a2.call(controller);
+    controller = typeof AbortController !== "undefined" ? new AbortController() : {};
+    const timeoutLength = toValue(opts.timeout);
+    if (timeoutLength) {
+      setTimeout(() => controller.abort(), timeoutLength);
+    }
+    let _$fetch = opts.$fetch || globalThis.$fetch;
+    if (!opts.$fetch) {
+      const isLocalFetch = typeof _request.value === "string" && _request.value[0] === "/" && (!toValue(opts.baseURL) || toValue(opts.baseURL)[0] === "/");
+      if (isLocalFetch) {
+        _$fetch = useRequestFetch();
+      }
+    }
+    return _$fetch(_request.value, { signal: controller.signal, ..._fetchOptions });
+  }, _asyncDataOptions);
+  return asyncData;
+}
+function generateOptionSegments(opts) {
+  var _a2;
+  const segments = [
+    ((_a2 = toValue(opts.method)) == null ? void 0 : _a2.toUpperCase()) || "GET",
+    toValue(opts.baseURL)
+  ];
+  for (const _obj of [opts.params || opts.query]) {
+    const obj = toValue(_obj);
+    if (!obj) {
+      continue;
+    }
+    const unwrapped = {};
+    for (const [key, value] of Object.entries(obj)) {
+      unwrapped[toValue(key)] = toValue(value);
+    }
+    segments.push(unwrapped);
+  }
+  return segments;
 }
 const CookieDefaults = {
   path: "/",
@@ -33719,6 +33915,11 @@ const withNoopInstall = (component) => {
   return component;
 };
 const componentSizes = ["", "default", "small", "large"];
+const componentSizeMap = {
+  large: 40,
+  default: 32,
+  small: 24
+};
 const mutable = (val) => val;
 const useDeprecated = ({ from, replacement, scope, version: version2, ref: ref2, type = "API" }, condition) => {
   watch(() => unref(condition), (val) => {
@@ -33888,7 +34089,7 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-var Icon = /* @__PURE__ */ _export_sfc$1(_sfc_main$8, [["__file", "icon.vue"]]);
+var Icon = /* @__PURE__ */ _export_sfc$1(_sfc_main$8, [["__file", "/home/runner/work/element-plus/element-plus/packages/components/icon/src/icon.vue"]]);
 const ElIcon = withInstall(Icon);
 const formContextKey = Symbol("formContextKey");
 const formItemContextKey = Symbol("formItemContextKey");
@@ -34174,7 +34375,7 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-var Button = /* @__PURE__ */ _export_sfc$1(_sfc_main$7, [["__file", "button.vue"]]);
+var Button = /* @__PURE__ */ _export_sfc$1(_sfc_main$7, [["__file", "/home/runner/work/element-plus/element-plus/packages/components/button/src/button.vue"]]);
 const buttonGroupProps = {
   size: buttonProps.size,
   type: buttonProps.type
@@ -34201,7 +34402,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-var ButtonGroup = /* @__PURE__ */ _export_sfc$1(_sfc_main$6, [["__file", "button-group.vue"]]);
+var ButtonGroup = /* @__PURE__ */ _export_sfc$1(_sfc_main$6, [["__file", "/home/runner/work/element-plus/element-plus/packages/components/button/src/button-group.vue"]]);
 const ElButton = withInstall(Button, {
   ButtonGroup
 });
@@ -34643,13 +34844,15 @@ function httpRequest(method, url, bodyOrParams, opts) {
       const code = data.code;
       if (data.code !== StatusCode.SUCCESS)
         msg2 = StatusCodeText[code] || "";
-      if (msg2 !== "" && void 0) {
-        ElMessage.closeAll("error");
-        ElMessage.error({
-          grouping: true,
-          type,
-          message: data.message.length > 50 ? msg2 : data.message
-        });
+      if (msg2 !== "") {
+        setTimeout(() => {
+          ElMessage.closeAll("error");
+          ElMessage.error({
+            grouping: true,
+            type,
+            message: data.message.length > 50 ? msg2 : data.message
+          });
+        }, 10);
       }
       if ((_a2 = coinfig.response.headers) == null ? void 0 : _a2.Authorization) {
         user.token = (_b2 = coinfig.response.headers) == null ? void 0 : _b2.Authorization;
@@ -34657,12 +34860,12 @@ function httpRequest(method, url, bodyOrParams, opts) {
     },
     // 请求错误
     onRequestError() {
-      ElMessage.error("请求出错，请重试！");
+      (() => {
+        ElMessage.error("请求出错，请重试！");
+      })();
     },
     // 不同响应码
-    onResponseError({
-      response
-    }) {
+    onResponseError({ response }) {
       switch (response.status) {
         case 400:
           msg = "请求参数错误，请稍后重试！";
@@ -34695,10 +34898,7 @@ function httpRequest(method, url, bodyOrParams, opts) {
     else
       defaultOpts.body = bodyOrParams;
   }
-  return $fetch(url, {
-    ...defaultOpts,
-    ...opts
-  });
+  return $fetch(url, { ...defaultOpts, ...opts });
 }
 const useHttp = {
   post(request, body, opts) {
@@ -34722,49 +34922,59 @@ function getUserInfo(token) {
   });
 }
 function updatePwdByToken(dto, token) {
-  return useHttp.put("/user/info/pwd", {
-    ...dto
-  }, {
-    headers: {
-      Authorization: token
+  return useHttp.put(
+    "/user/info/pwd",
+    { ...dto },
+    {
+      headers: {
+        Authorization: token
+      }
     }
-  });
+  );
 }
 function updateInfoByDTO(upUserInfo, token) {
-  return useHttp.put("/user/info", {
-    ...upUserInfo
-  }, {
-    headers: {
-      Authorization: token
+  return useHttp.put(
+    "/user/info",
+    { ...upUserInfo },
+    {
+      headers: {
+        Authorization: token
+      }
     }
-  });
+  );
 }
 function getUpdateNewCode(key, type, token) {
-  return useHttp.get(`/user/info/code/${key}`, {
-    type
-  }, {
-    headers: {
-      Authorization: token
+  return useHttp.get(
+    `/user/info/code/${key}`,
+    { type },
+    {
+      headers: {
+        Authorization: token
+      }
     }
-  });
+  );
 }
 function updatePhone(dto, token) {
-  return useHttp.put("/user/info/phone", {
-    ...dto
-  }, {
-    headers: {
-      Authorization: token
+  return useHttp.put(
+    "/user/info/phone",
+    { ...dto },
+    {
+      headers: {
+        Authorization: token
+      }
     }
-  });
+  );
 }
 function updateEmail(dto, token) {
-  return useHttp.put("/user/info/email", {
-    ...dto
-  }, {
-    headers: {
-      Authorization: token
+  return useHttp.put(
+    "/user/info/email",
+    { ...dto },
+    {
+      headers: {
+        Authorization: token
+      }
     }
-  });
+  );
 }
 var DeviceType = /* @__PURE__ */ ((DeviceType2) => {
   DeviceType2[DeviceType2["PHONE"] = 0] = "PHONE";
@@ -34807,115 +35017,15 @@ var RechangeType = /* @__PURE__ */ ((RechangeType2) => {
   RechangeType2[RechangeType2["COMBO"] = 1] = "COMBO";
   return RechangeType2;
 })(RechangeType || {});
-const useUserStore = defineStore("user", () => {
-  const token = ref("");
-  const isLogin = ref(false);
-  const showLoginForm = ref(false);
-  const showRegisterForm = ref(false);
-  const showUpdatePwd = ref(false);
-  const userWallet = ref({
-    userId: "",
-    balance: 0,
-    recharge: 0,
-    spend: 0,
-    points: 0,
-    updateTime: "",
-    createTime: ""
-  });
-  const userInfo = ref({
-    id: "",
-    username: "",
-    email: "",
-    phone: "",
-    nickname: "",
-    gender: Gender.BOY,
-    avatar: "",
-    birthday: "",
-    createTime: "",
-    slogan: "",
-    updateTime: "",
-    lastLoginTime: "",
-    status: UserStatus.FALESE,
-    isEmailVerified: 0,
-    isPhoneVerified: 0
-  });
-  const getToken = computed({
-    get() {
-      if (!isLogin.value || !token.value) {
-        showLoginForm.value = true;
-        return "";
-      } else {
-        return token.value;
-      }
-    },
-    set(value) {
-      token.value = value;
-    }
-  });
-  function getTokenFn() {
-    return token.value;
-  }
-  const loadUserWallet = async (token2) => {
-    const wallet = await getUserWallet(token2);
-    if (wallet.code === StatusCode.SUCCESS) {
-      useUserStore().$patch({
-        userWallet: {
-          ...wallet.data
-        }
-      });
-      return true;
-    } else {
-      return false;
-    }
-  };
-  const onUserLogin = async (token2, saveLocal) => {
-    const store = useUserStore();
-    loadUserWallet(token2);
-    const res = await getUserInfo(token2);
-    if (res.code && res.code === StatusCode.SUCCESS) {
-      store.$patch({
-        userInfo: {
-          ...res.data
-        }
-      });
-    } else {
-      onUserExit(token2);
-    }
-  };
-  function exitLogin() {
-    ElMessageBox.confirm("是否确认退出登录？", "退出登录", {
-      confirmButtonText: "确认退出",
-      lockScroll: false,
-      cancelButtonText: "取消",
-      type: "warning"
-    }).then(() => {
-      onUserExit(token.value);
-    }).catch(() => {
-    });
-  }
-  const loadUserInfo = async (token2) => {
-    const user = await getUserInfo(token2);
-    if (user.code === StatusCode.SUCCESS) {
-      userInfo.value = user.data;
-      return true;
-    } else {
-      return false;
-    }
-  };
-  const onCheckLogin = () => {
-    if (token.value)
-      return onUserLogin(token.value);
-  };
-  async function onUserExit(t) {
-    if (t) {
-      clearUserStore();
-      return await toLogout(t);
-    }
-  }
-  function clearUserStore() {
-    token.value = "";
-    isLogin.value = false;
-    userWallet.value = {
+const useUserStore = defineStore(
+  "user",
+  () => {
+    const token = ref("");
+    const isLogin = ref(false);
+    const showLoginForm = ref(false);
+    const showRegisterForm = ref(false);
+    const showUpdatePwd = ref(false);
+    const userWallet = ref({
       userId: "",
       balance: 0,
       recharge: 0,
@@ -34923,8 +35033,8 @@ const useUserStore = defineStore("user", () => {
       points: 0,
       updateTime: "",
       createTime: ""
-    };
-    userInfo.value = {
+    });
+    const userInfo = ref({
       id: "",
       username: "",
       email: "",
@@ -34934,41 +35044,145 @@ const useUserStore = defineStore("user", () => {
       avatar: "",
       birthday: "",
       createTime: "",
-      updateTime: "",
       slogan: "",
+      updateTime: "",
       lastLoginTime: "",
       status: UserStatus.FALESE,
       isEmailVerified: 0,
       isPhoneVerified: 0
+    });
+    const getToken = computed({
+      get() {
+        if (!isLogin.value || !token.value) {
+          showLoginForm.value = true;
+          return "";
+        } else {
+          return token.value;
+        }
+      },
+      set(value) {
+        token.value = value;
+      }
+    });
+    function getTokenFn() {
+      return token.value;
+    }
+    const loadUserWallet = async (token2) => {
+      const wallet = await getUserWallet(token2);
+      if (wallet.code === StatusCode.SUCCESS) {
+        useUserStore().$patch({
+          userWallet: {
+            ...wallet.data
+          }
+        });
+        return true;
+      } else {
+        return false;
+      }
     };
+    const onUserLogin = async (token2, saveLocal) => {
+      const store = useUserStore();
+      loadUserWallet(token2);
+      const res = await getUserInfo(token2);
+      if (res.code && res.code === StatusCode.SUCCESS) {
+        store.$patch({
+          userInfo: {
+            ...res.data
+          }
+        });
+      } else {
+        onUserExit(token2);
+      }
+    };
+    function exitLogin() {
+      ElMessageBox.confirm("是否确认退出登录？", "退出登录", {
+        confirmButtonText: "确认退出",
+        lockScroll: false,
+        cancelButtonText: "取消",
+        type: "warning"
+      }).then(() => {
+        onUserExit(token.value);
+      }).catch(() => {
+      });
+    }
+    const loadUserInfo = async (token2) => {
+      const user = await getUserInfo(token2);
+      if (user.code === StatusCode.SUCCESS) {
+        userInfo.value = user.data;
+        return true;
+      } else {
+        return false;
+      }
+    };
+    const onCheckLogin = () => {
+      if (token.value)
+        return onUserLogin(token.value);
+    };
+    async function onUserExit(t) {
+      if (t) {
+        clearUserStore();
+        return await toLogout(t);
+      }
+    }
+    function clearUserStore() {
+      token.value = "";
+      isLogin.value = false;
+      userWallet.value = {
+        userId: "",
+        balance: 0,
+        recharge: 0,
+        spend: 0,
+        points: 0,
+        updateTime: "",
+        createTime: ""
+      };
+      userInfo.value = {
+        id: "",
+        username: "",
+        email: "",
+        phone: "",
+        nickname: "",
+        gender: Gender.BOY,
+        avatar: "",
+        birthday: "",
+        createTime: "",
+        updateTime: "",
+        slogan: "",
+        lastLoginTime: "",
+        status: UserStatus.FALESE,
+        isEmailVerified: 0,
+        isPhoneVerified: 0
+      };
+    }
+    return {
+      // state
+      token,
+      isLogin,
+      showUpdatePwd,
+      showLoginForm,
+      showRegisterForm,
+      userInfo,
+      userWallet,
+      // actions
+      onUserLogin,
+      onCheckLogin,
+      onUserExit,
+      exitLogin,
+      clearUserStore,
+      loadUserWallet,
+      loadUserInfo,
+      // getter
+      getToken,
+      getTokenFn
+    };
+  },
+  {
+    // https://prazdevs.github.io/pinia-plugin-persistedstate/frameworks/nuxt-3.html
+    persist: {
+      storage: persistedState.localStorage
+    }
   }
-  return {
-    // state
-    token,
-    isLogin,
-    showUpdatePwd,
-    showLoginForm,
-    showRegisterForm,
-    userInfo,
-    userWallet,
-    // actions
-    onUserLogin,
-    onCheckLogin,
-    onUserExit,
-    exitLogin,
-    clearUserStore,
-    loadUserWallet,
-    loadUserInfo,
-    // getter
-    getToken,
-    getTokenFn
-  };
-}, {
-  // https://prazdevs.github.io/pinia-plugin-persistedstate/frameworks/nuxt-3.html
-  persist: {
-    storage: persistedState.localStorage
-  }
-});
+);
 const directive_I6YZ1QHKAO = /* @__PURE__ */ defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.directive("longpress", {
     mounted(el, binding) {
@@ -34988,21 +35202,11 @@ const directive_I6YZ1QHKAO = /* @__PURE__ */ defineNuxtPlugin((nuxtApp) => {
           timer = 0;
         }
       };
-      el.addEventListener("mousedown", start, {
-        passive: true
-      });
-      el.addEventListener("touchstart", start, {
-        passive: true
-      });
-      el.addEventListener("mouseout", cancel, {
-        passive: true
-      });
-      el.addEventListener("touchend", cancel, {
-        passive: true
-      });
-      el.addEventListener("click", cancel, {
-        passive: true
-      });
+      el.addEventListener("mousedown", start, { passive: true });
+      el.addEventListener("touchstart", start, { passive: true });
+      el.addEventListener("mouseout", cancel, { passive: true });
+      el.addEventListener("touchend", cancel, { passive: true });
+      el.addEventListener("click", cancel, { passive: true });
     }
   });
   nuxtApp.vueApp.directive("window-lock", {
@@ -35044,9 +35248,7 @@ const directive_I6YZ1QHKAO = /* @__PURE__ */ defineNuxtPlugin((nuxtApp) => {
             grouping: true
           });
         }
-      }, {
-        passive: true
-      });
+      }, { passive: true });
     }
   });
   nuxtApp.vueApp.directive("auth", {
@@ -35059,9 +35261,7 @@ const directive_I6YZ1QHKAO = /* @__PURE__ */ defineNuxtPlugin((nuxtApp) => {
           return;
         }
         (user == null ? void 0 : user.getTokenFn) && (user == null ? void 0 : user.getTokenFn());
-      }, {
-        passive: true
-      });
+      }, { passive: true });
     }
   });
   nuxtApp.vueApp.directive("incre-up", {
@@ -35084,9 +35284,7 @@ const directive_I6YZ1QHKAO = /* @__PURE__ */ defineNuxtPlugin((nuxtApp) => {
 function increNumber(el, binding, isInt) {
   const targetValue = binding.value;
   const duration = binding.arg || 1;
-  const counter = {
-    var: binding.oldValue || 0
-  };
+  const counter = { var: binding.oldValue || 0 };
   gsap.to(counter, {
     var: targetValue,
     duration,
@@ -46704,10 +46902,10 @@ var SeriesDataSchema = (
         dimHash += "$";
       }
       var source = this.source;
-      var hash = [source.seriesLayoutBy, source.startIndex, dimHash].join("$$");
+      var hash2 = [source.seriesLayoutBy, source.startIndex, dimHash].join("$$");
       return {
         dimensions: dims,
-        hash
+        hash: hash2
       };
     };
     SeriesDataSchema2.prototype.makeOutputDimensionNames = function() {
@@ -58698,12 +58896,12 @@ var AxisProxy = (
       asc(percentWindow);
       var spans = this._minMaxSpan;
       hasPropModeValue ? restrictSet(valueWindow, percentWindow, dataExtent, percentExtent, false) : restrictSet(percentWindow, valueWindow, percentExtent, dataExtent, true);
-      function restrictSet(fromWindow, toWindow, fromExtent, toExtent, toValue) {
-        var suffix = toValue ? "Span" : "ValueSpan";
+      function restrictSet(fromWindow, toWindow, fromExtent, toExtent, toValue2) {
+        var suffix = toValue2 ? "Span" : "ValueSpan";
         sliderMove(0, fromWindow, fromExtent, "all", spans["min" + suffix], spans["max" + suffix]);
         for (var i = 0; i < 2; i++) {
           toWindow[i] = linearMap(fromWindow[i], fromExtent, toExtent, true);
-          toValue && (toWindow[i] = scale2.parse(toWindow[i]));
+          toValue2 && (toWindow[i] = scale2.parse(toWindow[i]));
         }
       }
       return {
@@ -64932,7 +65130,21 @@ function install(registers) {
   registers.registerPainter("svg", SVGPainter$1);
 }
 const echarts_HOs5L9sCmP = /* @__PURE__ */ defineNuxtPlugin(async (nuxtApp) => {
-  use([install$9, install$a, install$b, install$3, install$d, install$1, install$2, install$g, install$h, installLabelLayout, install$6, installUniversalTransition, install]);
+  use([
+    install$9,
+    install$a,
+    install$b,
+    install$3,
+    install$d,
+    install$1,
+    install$2,
+    install$g,
+    install$h,
+    installLabelLayout,
+    install$6,
+    installUniversalTransition,
+    install
+  ]);
 });
 const error_handler_kEP5FliEXj = /* @__PURE__ */ defineNuxtPlugin((nuxtApp) => {
   nuxtApp.hook("vue:error", (error2, instance, info) => {
@@ -64971,7 +65183,7 @@ const plugins = [
   v_md_editor_gUw498eFWI
 ];
 const pwaInfo = { "pwaInDevEnvironment": false, "webManifest": { "href": "/manifest.webmanifest", "useCredentials": false, "linkTag": '<link rel="manifest" href="/manifest.webmanifest">' } };
-const __nuxt_component_0$2 = defineComponent({
+const __nuxt_component_0$1 = defineComponent({
   async setup() {
     if (pwaInfo) {
       const meta = ref({ link: [] });
@@ -64996,6 +65208,31 @@ const __nuxt_component_0$2 = defineComponent({
     return () => null;
   }
 });
+const _imports_0 = "" + __publicAssetsURL("logo.png");
+const _sfc_main$5 = /* @__PURE__ */ defineComponent({
+  __name: "Loading",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const isPageLoading = ref(true);
+    return (_ctx, _push, _parent, _attrs) => {
+      if (unref(isPageLoading)) {
+        _push(`<div${ssrRenderAttrs(mergeProps({
+          style: { "position": "fixed", "top": "0", "display": "flex", "justify-content": "center", "align-items": "center", "left": "0", "width": "100%", "height": "100vh", "z-index": "9999", "overflow": "hidden" },
+          "text-shadow-color-op-50": "",
+          class: "bg-light text-shadow text-shadow-color-light dark:bg-dark dark:text-shadow-color-[#000]"
+        }, _attrs))}><h2 flex-row-c-c animate-pulse class="tracking-3"><img${ssrRenderAttr("src", _imports_0)} class="mr-3 h-2rem w-2rem"> 极物圈 </h2></div>`);
+      } else {
+        _push(`<!---->`);
+      }
+    };
+  }
+});
+const _sfc_setup$5 = _sfc_main$5.setup;
+_sfc_main$5.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/other/Loading.vue");
+  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
+};
 function createLoadingIndicator(opts = {}) {
   const { duration = 2e3, throttle: throttle2 = 200 } = opts;
   const nuxtApp = /* @__PURE__ */ useNuxtApp();
@@ -65049,7 +65286,7 @@ function useLoadingIndicator(opts = {}) {
   const indicator = nuxtApp._loadingIndicator = nuxtApp._loadingIndicator || createLoadingIndicator(opts);
   return indicator;
 }
-const __nuxt_component_1 = defineComponent({
+const __nuxt_component_2$2 = defineComponent({
   name: "NuxtLoadingIndicator",
   props: {
     throttle: {
@@ -65131,7 +65368,7 @@ const RouteProvider = defineComponent({
     };
   }
 });
-const __nuxt_component_2$1 = defineComponent({
+const __nuxt_component_3 = defineComponent({
   name: "NuxtPage",
   inheritAttrs: false,
   props: {
@@ -65241,42 +65478,7 @@ function hasChildrenRoutes(fork, newRoute, Component) {
   });
   return index < newRoute.matched.length - 1;
 }
-const _imports_0 = "" + __publicAssetsURL("logo.png");
-const _sfc_main$5 = /* @__PURE__ */ defineComponent({
-  __name: "Loading",
-  __ssrInlineRender: true,
-  setup(__props) {
-    const isPageLoading = ref(true);
-    return (_ctx, _push, _parent, _attrs) => {
-      if (unref(isPageLoading)) {
-        _push(`<div${ssrRenderAttrs(mergeProps({
-          style: {
-            "position": "fixed",
-            "top": "0",
-            "display": "flex",
-            "justify-content": "center",
-            "align-items": "center",
-            "left": "0",
-            "width": "100%",
-            "height": "100vh",
-            "z-index": "9999",
-            "overflow": "hidden"
-          },
-          class: "bg-light dark:bg-dark"
-        }, _attrs))}><h2 flex-row-c-c animate-pulse class="tracking-3"><img${ssrRenderAttr("src", _imports_0)} class="mr-3 h-2rem w-2rem"> 极物圈 </h2></div>`);
-      } else {
-        _push(`<!---->`);
-      }
-    };
-  }
-});
-const _sfc_setup$5 = _sfc_main$5.setup;
-_sfc_main$5.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/other/Loading.vue");
-  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
-};
-const __nuxt_component_0$1 = defineComponent({
+const __nuxt_component_2$1 = defineComponent({
   name: "ClientOnly",
   inheritAttrs: false,
   // eslint-disable-next-line vue/require-prop-types
@@ -65299,36 +65501,48 @@ const __nuxt_component_0$1 = defineComponent({
   }
 });
 function getUserShopCartPage(page, size, token) {
-  return useHttp.get(`/user/cart/${page}/${size}`, {}, {
-    headers: {
-      Authorization: token
+  return useHttp.get(
+    `/user/cart/${page}/${size}`,
+    {},
+    {
+      headers: {
+        Authorization: token
+      }
     }
-  });
+  );
 }
 function addShopcart(dto, token) {
-  return useHttp.post("/user/cart/", {
-    ...dto
-  }, {
-    headers: {
-      Authorization: token
+  return useHttp.post(
+    "/user/cart/",
+    { ...dto },
+    {
+      headers: {
+        Authorization: token
+      }
     }
-  });
+  );
 }
 function updateShopcart(id, dto, token) {
-  return useHttp.put(`/user/cart/${id}`, {
-    ...dto
-  }, {
-    headers: {
-      Authorization: token
+  return useHttp.put(
+    `/user/cart/${id}`,
+    { ...dto },
+    {
+      headers: {
+        Authorization: token
+      }
     }
-  });
+  );
 }
 function deleteShopcart(id, token) {
-  return useHttp.deleted(`/user/cart/one/${id}`, {}, {
-    headers: {
-      Authorization: token
+  return useHttp.deleted(
+    `/user/cart/one/${id}`,
+    {},
+    {
+      headers: {
+        Authorization: token
+      }
     }
-  });
+  );
 }
 const useShopStore = defineStore("shop", () => {
   const shopcartList = ref([]);
@@ -65351,10 +65565,7 @@ const useShopStore = defineStore("shop", () => {
       return;
     page.value++;
     isLoading.value = true;
-    const {
-      data,
-      code
-    } = await getUserShopCartPage(page.value, size.value, user.getToken);
+    const { data, code } = await getUserShopCartPage(page.value, size.value, user.getToken);
     if (code === StatusCode.SUCCESS && (data == null ? void 0 : data.records.length) > 0) {
       pageInfo.value = data;
       shopcartList.value.push(...data.records);
@@ -65390,10 +65601,7 @@ const useShopStore = defineStore("shop", () => {
       shopcartList.value[index].quantity += quantity2;
       return true;
     } else {
-      const res = await addShopcart({
-        skuId,
-        quantity: 1
-      }, token);
+      const res = await addShopcart({ skuId, quantity: 1 }, token);
       if (res.code === StatusCode.SUCCESS)
         await reLoadShopcartList();
       return res.code === StatusCode.SUCCESS;
@@ -65445,47 +65653,23 @@ const useShopStore = defineStore("shop", () => {
   }
 });
 function getAddressList(token) {
-  return useHttp.get("/user/address", {}, {
-    headers: {
-      Authorization: token
-    }
-  });
+  return useHttp.get("/user/address", {}, { headers: { Authorization: token } });
 }
 function addAddressByDTO(dto, token) {
   dto.isDefault = +dto.isDefault;
-  return useHttp.post("/user/address", {
-    ...dto
-  }, {
-    headers: {
-      Authorization: token
-    }
-  });
+  return useHttp.post("/user/address", { ...dto }, { headers: { Authorization: token } });
 }
 function updateAddressById(addressId, dto, token) {
   dto.isDefault = +dto.isDefault;
-  return useHttp.put(`/user/address/${addressId}`, {
-    ...dto
-  }, {
-    headers: {
-      Authorization: token
-    }
-  });
+  return useHttp.put(`/user/address/${addressId}`, { ...dto }, { headers: { Authorization: token } });
 }
 function deleteAddressById(addressId, token) {
-  return useHttp.deleted(`/user/address/one/${addressId}`, {}, {
-    headers: {
-      Authorization: token
-    }
-  });
+  return useHttp.deleted(`/user/address/one/${addressId}`, {}, { headers: { Authorization: token } });
 }
 function deleteBatchAddressByIds(ids, token) {
   return useHttp.deleted("/user/address/some", {
     ids
-  }, {
-    headers: {
-      Authorization: token
-    }
-  });
+  }, { headers: { Authorization: token } });
 }
 const useAddressStore = defineStore("address", () => {
   const addressList = ref([]);
@@ -65511,7 +65695,126 @@ const useAddressStore = defineStore("address", () => {
     storage: persistedState.localStorage
   }
 });
+function getCommCategory() {
+  return useFetch(() => `${BaseUrl}/community/category/tree`, "$KmVHAG10kk");
+}
+function getCommCategoryList() {
+  return useHttp.get(`${BaseUrl}/community/category/list`);
+}
+function getCommPostCategoryById(id) {
+  return useHttp.get(`/community/category/post/${id}`);
+}
+function getCommCategoryById(id) {
+  return useHttp.get(`/community/category/one/${id}`);
+}
+const useSettingStore = defineStore(
+  "setting",
+  () => {
+    const isUserFold = ref(true);
+    const isUserCollapse = ref(true);
+    const isFold = ref(true);
+    const isCollapse = ref(true);
+    const menuList = ref([
+      { url: "/", icon: "i-solar:home-2-bold", title: "首页", children: [] },
+      { url: "/community/post/list", icon: "i-solar:ufo-3-bold-duotone", title: "极物圈", children: [] },
+      {
+        url: "/category",
+        icon: "i-solar:widget-5-bold-duotone",
+        title: "圈子",
+        disabled: true,
+        children: []
+      },
+      { url: "/chat", icon: "i-solar:chat-round-bold-duotone", title: "聊天", children: [] },
+      { url: "/setting", icon: "i-solar:settings-linear", title: "设置", children: [] }
+    ]);
+    async function loadMenus() {
+      var _a2, _b2;
+      const { data } = await getCommCategory();
+      menuList.value[2].children = ((_b2 = (_a2 = data.value) == null ? void 0 : _a2.data) == null ? void 0 : _b2.map((p) => toMenuTypeFn(p))) || [];
+    }
+    function toMenuTypeFn(p) {
+      var _a2, _b2;
+      const arr = {
+        url: `/community/category/${p.id}`,
+        icon: "",
+        image: p.image,
+        title: p.name,
+        children: []
+      };
+      if ((_a2 = p.children) == null ? void 0 : _a2.length)
+        arr.children = (_b2 = p.children) == null ? void 0 : _b2.map((item) => toMenuTypeFn(item));
+      return arr;
+    }
+    const settingPage = ref({
+      // 字体
+      fontFamily: {
+        value: "Alimama",
+        list: [
+          { name: "阿里妈妈方圆体", value: "Alimama" },
+          { name: "字玩哥特黑白无常体", value: "ZiWanGeTe" },
+          { name: "阿里健康体2.0", value: "AlibabaHealthFont2" },
+          { name: "阿里妈妈刀隶体", value: "AlimamaDaoLiTi" },
+          { name: "阿里妈妈东方大楷", value: "Alimama_DongFangDaKai" }
+        ]
+      },
+      modeToggle: {
+        value: "auto",
+        list: [
+          { name: "自动", value: "auto" },
+          { name: "日间", value: "light" },
+          { name: "夜间", value: "dark" }
+        ]
+      }
+    });
+    const isChatFold = ref(false);
+    const isThemeChangeLoad = ref(false);
+    const isOpenGroupMember = ref(true);
+    const isOpenContact = ref(true);
+    return {
+      isChatFold,
+      // state
+      isCollapse,
+      menuList,
+      isOpenContact,
+      isOpenGroupMember,
+      isFold,
+      isUserCollapse,
+      isUserFold,
+      settingPage,
+      isThemeChangeLoad,
+      // actions
+      loadMenus
+      // getter
+    };
+  },
+  {
+    // https://prazdevs.github.io/pinia-plugin-persistedstate/frameworks/nuxt-3.html
+    persist: {
+      storage: persistedState.cookies
+    }
+  }
+);
+const useColorMode = () => {
+  return useState("color-mode").value;
+};
+function useModeToggle(mode, event) {
+  const setting = useSettingStore();
+  if (setting.isThemeChangeLoad)
+    return;
+  setting.isThemeChangeLoad = true;
+  const colorMode = useColorMode();
+  if (mode === "auto") {
+    const hours = (/* @__PURE__ */ new Date()).getHours();
+    colorMode.preference = hours > 18 && hours < 6 ? "dark" : "light";
+    return;
+  }
+  {
+    colorMode.preference = mode;
+    return;
+  }
+}
 const appName = "极物圈";
+const appKeywords = "极物圈,AI推荐, 极物圈商城, 极物圈社交平台, 极物圈钱包, jiwuquan, 极物之旅, 主页, 聊天, 客服, 购物, shop, mall, ai";
 const _sfc_main$4 = /* @__PURE__ */ defineComponent({
   __name: "app",
   __ssrInlineRender: true,
@@ -65519,46 +65822,62 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
     const user = useUserStore();
     const shop = useShopStore();
     const address = useAddressStore();
-    watch(() => user.isLogin, async (val) => {
-      if (val) {
-        user.onCheckLogin();
-        shop.isLoading = false;
-        shop.reLoadShopcartList();
-        address.resetRequestList(user.getToken);
+    watch(
+      () => user.isLogin,
+      async (val) => {
+        if (val) {
+          user.onCheckLogin();
+          shop.isLoading = false;
+          shop.reLoadShopcartList();
+          address.resetRequestList(user.getToken);
+        }
+      },
+      {
+        immediate: true
       }
-    }, {
-      immediate: true
-    });
+    );
     useHead({
       title: `${appName} - 开启你的极物之旅 ✨`,
-      meta: [{
-        name: "description",
-        content: "极物圈-主页 开启你的极物之旅！"
-      }]
+      meta: [
+        {
+          name: "description",
+          content: "极物圈-主页 开启你的极物之旅！"
+        }
+      ]
     });
     useSeoMeta({
       title: `${appName} - 开启你的极物之旅 ✨`,
       description: "极物圈-主页 开启你的极物之旅！",
-      keywords: "社区,商城,极物之旅,主页,聊天,客服,购物,home,index,shop,chat"
+      keywords: appKeywords
+    });
+    const setting = useSettingStore();
+    const colorMode = useColorMode();
+    function keyToggleTheme(e) {
+      if (setting.isThemeChangeLoad)
+        return;
+      if ((e == null ? void 0 : e.altKey) && (e == null ? void 0 : e.key) && (e == null ? void 0 : e.key) === "k") {
+        ((void 0).innerWidth || (void 0).documentElement.clientWidth || (void 0).body.clientWidth) / 2;
+        ((void 0).innerHeight || (void 0).documentElement.clientHeight || (void 0).body.clientHeight) / 2;
+        useModeToggle(colorMode.preference === "dark" ? "light" : "dark");
+      }
+    }
+    onUnmounted(() => {
+      (void 0).removeEventListener("keydown", keyToggleTheme);
     });
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_VitePwaManifest = __nuxt_component_0$2;
-      const _component_NuxtLoadingIndicator = __nuxt_component_1;
-      const _component_NuxtPage = __nuxt_component_2$1;
+      const _component_VitePwaManifest = __nuxt_component_0$1;
       const _component_OtherLoading = _sfc_main$5;
-      const _component_ClientOnly = __nuxt_component_0$1;
-      _push(`<div${ssrRenderAttrs(mergeProps({
-        id: "app"
-      }, _attrs))}>`);
+      const _component_NuxtLoadingIndicator = __nuxt_component_2$2;
+      const _component_NuxtPage = __nuxt_component_3;
+      const _component_ClientOnly = __nuxt_component_2$1;
+      _push(`<div${ssrRenderAttrs(mergeProps({ id: "app" }, _attrs))}>`);
       _push(ssrRenderComponent(_component_VitePwaManifest, null, null, _parent));
+      _push(ssrRenderComponent(_component_OtherLoading, null, null, _parent));
       _push(ssrRenderComponent(_component_NuxtLoadingIndicator, {
-        color: "linear-gradient(to right, #4bf380, #71e9ed, #f64f59)",
-        duration: 400
+        duration: 500,
+        color: "linear-gradient(to right, #4bf380, #71e9ed, #f64f59)"
       }, null, _parent));
       _push(ssrRenderComponent(_component_NuxtPage, null, null, _parent));
-      _push(ssrRenderComponent(_component_OtherLoading, {
-        "nuxt-client": ""
-      }, null, _parent));
       _push(ssrRenderComponent(_component_ClientOnly, null, {}, _parent));
       _push(`</div>`);
     };
@@ -65571,11 +65890,11 @@ _sfc_main$4.setup = (props, ctx) => {
   return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
 const layouts = {
-  chat: () => import('./_nuxt/chat-Xyagk2XX.mjs').then((m) => m.default || m),
-  error: () => import('./_nuxt/error-qAQv38YP.mjs').then((m) => m.default || m),
-  main: () => import('./_nuxt/main-hNaBQsUE.mjs').then((m) => m.default || m),
-  second: () => import('./_nuxt/second-PXNQPNsb.mjs').then((m) => m.default || m),
-  user: () => import('./_nuxt/user-6nRfv4J3.mjs').then((m) => m.default || m)
+  chat: () => import('./_nuxt/chat-0mgaG7zs.mjs').then((m) => m.default || m),
+  error: () => import('./_nuxt/error-uGHDwlPb.mjs').then((m) => m.default || m),
+  main: () => import('./_nuxt/main-kGaDpBeQ.mjs').then((m) => m.default || m),
+  second: () => import('./_nuxt/second-OJtFCxkh.mjs').then((m) => m.default || m),
+  user: () => import('./_nuxt/user-bo4gQhZu.mjs').then((m) => m.default || m)
 };
 const LayoutLoader = defineComponent({
   name: "LayoutLoader",
@@ -65683,16 +66002,12 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
   __ssrInlineRender: true,
   props: {
     iconClass: {},
-    transitionIcon: {
-      type: Boolean
-    }
+    transitionIcon: { type: Boolean }
   },
   setup(__props) {
     return (_ctx, _push, _parent, _attrs) => {
       const _component_el_button = ElButton;
-      _push(ssrRenderComponent(_component_el_button, mergeProps(_ctx.$attrs, {
-        class: "group-btn"
-      }, _attrs), {
+      _push(ssrRenderComponent(_component_el_button, mergeProps(_ctx.$attrs, { class: "group-btn" }, _attrs), {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             if (_ctx.iconClass) {
@@ -65702,10 +66017,13 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
             }
             ssrRenderSlot(_ctx.$slots, "default", {}, null, _push2, _parent2, _scopeId);
           } else {
-            return [_ctx.iconClass ? (openBlock(), createBlock("span", {
-              key: 0,
-              class: ["block h-1.1em", [_ctx.iconClass, _ctx.transitionIcon ? "toggle" : "w-1.1em"]]
-            }, null, 2)) : createCommentVNode("", true), renderSlot(_ctx.$slots, "default", {}, void 0, true)];
+            return [
+              _ctx.iconClass ? (openBlock(), createBlock("span", {
+                key: 0,
+                class: ["block h-1.1em", [_ctx.iconClass, _ctx.transitionIcon ? "toggle" : "w-1.1em"]]
+              }, null, 2)) : createCommentVNode("", true),
+              renderSlot(_ctx.$slots, "default", {}, void 0, true)
+            ];
           }
         }),
         _: 3
@@ -65732,9 +66050,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   __ssrInlineRender: true,
   props: {
     msg: {},
-    icon: {
-      default: "i-solar:bone-broken-bold-duotone"
-    }
+    icon: { default: "i-solar:bone-broken-bold-duotone" }
   },
   setup(__props) {
     function onRefresh() {
@@ -65768,7 +66084,9 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
             if (_push2) {
               _push2(` 返回 `);
             } else {
-              return [createTextVNode(" 返回 ")];
+              return [
+                createTextVNode(" 返回 ")
+              ];
             }
           }),
           _: 1
@@ -65783,7 +66101,9 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
             if (_push2) {
               _push2(` 刷新 `);
             } else {
-              return [createTextVNode(" 刷新 ")];
+              return [
+                createTextVNode(" 刷新 ")
+              ];
             }
           }),
           _: 1
@@ -65808,9 +66128,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
       const _component_NuxtLayout = __nuxt_component_0;
       const _component_OtherError = _sfc_main$2;
       _push(`<div${ssrRenderAttrs(_attrs)}>`);
-      _push(ssrRenderComponent(_component_NuxtLayout, {
-        name: "error"
-      }, {
+      _push(ssrRenderComponent(_component_NuxtLayout, { name: "error" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           var _a2, _b2;
           if (_push2) {
@@ -65818,9 +66136,11 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
               msg: ((_a2 = unref(error2)) == null ? void 0 : _a2.message) || "500，服务端错误！"
             }, null, _parent2, _scopeId));
           } else {
-            return [createVNode$1(_component_OtherError, {
-              msg: ((_b2 = unref(error2)) == null ? void 0 : _b2.message) || "500，服务端错误！"
-            }, null, 8, ["msg"])];
+            return [
+              createVNode$1(_component_OtherError, {
+                msg: ((_b2 = unref(error2)) == null ? void 0 : _b2.message) || "500，服务端错误！"
+              }, null, 8, ["msg"])
+            ];
           }
         }),
         _: 1
@@ -65839,7 +66159,7 @@ const _sfc_main = {
   __name: "nuxt-root",
   __ssrInlineRender: true,
   setup(__props) {
-    const IslandRenderer = defineAsyncComponent(() => import('./_nuxt/island-renderer-9FS9Magv.mjs').then((r) => r.default || r));
+    const IslandRenderer = defineAsyncComponent(() => import('./_nuxt/island-renderer-pC0cNoVr.mjs').then((r) => r.default || r));
     const nuxtApp = /* @__PURE__ */ useNuxtApp();
     nuxtApp.deferHydration();
     nuxtApp.ssrContext.url;
@@ -65880,11 +66200,10 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("node_modules/nuxt/dist/app/components/nuxt-root.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const RootComponent = _sfc_main;
 let entry;
 {
   entry = async function createNuxtAppServer(ssrContext) {
-    const vueApp = createApp(RootComponent);
+    const vueApp = createApp(_sfc_main);
     const nuxt = createNuxtApp({ vueApp, ssrContext });
     try {
       await applyPlugins(nuxt, plugins);
@@ -65903,341 +66222,347 @@ const entry$1 = (ssrContext) => entry(ssrContext);
 
 const server = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  $: useAsyncCopyText,
-  A: BaseUrl,
+  $: question_filled_default,
+  A: useModeToggle,
   B: BaseUrlImg,
-  C: iconPropType,
-  D: withInstallFunction,
+  C: useRoute,
+  D: getCommCategoryById,
   E: ElMessage,
-  F: ElIcon,
-  G: CloseComponents,
-  H: isBoolean,
-  I: useGlobalConfig,
-  J: defaultNamespace,
-  K: useDeprecated,
-  L: componentSizes,
-  M: useFormSize,
-  N: formContextKey,
-  O: formItemContextKey,
-  P: withNoopInstall,
-  Q: useSizeProp,
-  R: mutable,
+  F: appName,
+  G: getCommCategoryList,
+  H: compareObjects,
+  I: clearError,
+  J: definePropType,
+  K: mutable,
+  L: full_screen_default,
+  M: scale_to_original_default,
+  N: ElIcon,
+  O: close_default,
+  P: arrow_left_default,
+  Q: arrow_right_default,
+  R: zoom_out_default,
   S: StatusCode,
-  T: useFormItem,
-  U: useFormItemInputId,
-  V: useFormDisabled,
-  W: ValidateComponentsMap,
-  X: view_default,
-  Y: hide_default,
-  Z: circle_close_default,
+  T: zoom_in_default,
+  U: refresh_left_default,
+  V: refresh_right_default,
+  W: plus_default,
+  X: iconPropType,
+  Y: withNoopInstall,
+  Z: buttonTypes,
   _: __nuxt_component_0,
   a: _sfc_main$2,
-  a$: isEmpty,
-  a0: arrow_left_default,
-  a1: arrow_right_default,
-  a2: close_default,
-  a3: plus_default,
-  a4: isUndefined,
-  a5: useState,
-  a6: arrow_down_default,
-  a7: full_screen_default,
-  a8: scale_to_original_default,
-  a9: zoom_out_default,
-  aA: arrow_left_bold_default,
-  aB: arrow_right_bold_default,
-  aC: useShopStore,
-  aD: minus_default,
-  aE: arrow_up_default,
-  aF: star_filled_default,
-  aG: star_default,
-  aH: hasClass,
-  aI: useHead,
-  aJ: close_bold_default,
-  aK: caret_right_default,
-  aL: useError,
-  aM: document_default,
-  aN: delete_default,
-  aO: shopping_cart_full_default,
-  aP: money_default,
-  aQ: credit_card_default,
-  aR: van_default,
-  aS: chat_dot_square_default,
-  aT: useAddressStore,
-  aU: useCheckXXSText,
-  aV: circle_plus_filled_default,
-  aW: clock_default,
-  aX: calendar_default,
-  aY: getStyle,
-  aZ: d_arrow_left_default,
-  a_: d_arrow_right_default,
-  aa: zoom_in_default,
-  ab: refresh_left_default,
-  ac: refresh_right_default,
-  ad: useRouter,
-  ae: nuxtLinkDefaults,
-  af: useRuntimeConfig,
-  ag: buildProp,
-  ah: useGetDerivedNamespace,
-  ai: useIdInjection,
-  aj: isElement,
-  ak: warning_filled_default,
-  al: circle_check_default,
-  am: check_default,
-  an: useRoute,
-  ao: asyncDataDefaults,
-  ap: useNuxtApp,
-  aq: fetchDefaults,
-  ar: useRequestFetch,
-  as: appName,
-  at: getUserLeave,
-  au: withInstallDirective,
-  av: compareObjects,
-  aw: clearError,
-  ax: buttonTypes,
-  ay: question_filled_default,
-  az: BaseUrlVideo,
+  a$: ElButtonGroup,
+  a0: addUnit,
+  a1: BaseUrlVideo,
+  a2: arrow_left_bold_default,
+  a3: arrow_right_bold_default,
+  a4: useShopStore,
+  a5: useAsyncData,
+  a6: useHead,
+  a7: close_bold_default,
+  a8: caret_right_default,
+  a9: star_filled_default,
+  aA: circle_close_default,
+  aB: arrow_down_default,
+  aC: updateAddressById,
+  aD: addAddressByDTO,
+  aE: deleteAddressById,
+  aF: deleteBatchAddressByIds,
+  aG: useId,
+  aH: delete_default,
+  aI: updateInfoByDTO,
+  aJ: getUserLeave,
+  aK: document_default,
+  aL: circle_check_default,
+  aM: clock_default,
+  aN: calendar_default,
+  aO: getStyle,
+  aP: arrow_up_default,
+  aQ: d_arrow_left_default,
+  aR: d_arrow_right_default,
+  aS: getCommCategory,
+  aT: componentSizes,
+  aU: updatePwdByToken,
+  aV: updatePhone,
+  aW: getUpdateNewCode,
+  aX: DeviceType,
+  aY: updateEmail,
+  aZ: updateShopcart,
+  a_: useRouter,
+  aa: useError,
+  ab: star_default,
+  ac: useSizeProp,
+  ad: formContextKey,
+  ae: formItemContextKey,
+  af: useFormSize,
+  ag: useFormItemInputId,
+  ah: hasClass,
+  ai: check_default,
+  aj: shopping_cart_full_default,
+  ak: money_default,
+  al: credit_card_default,
+  am: van_default,
+  an: chat_dot_square_default,
+  ao: useAddressStore,
+  ap: useCheckXXSText,
+  aq: circle_plus_filled_default,
+  ar: isBoolean,
+  as: useFormItem,
+  at: useFormDisabled,
+  au: debugWarn,
+  av: loading_default,
+  aw: useDeprecated,
+  ax: throwError$1,
+  ay: isEmpty,
+  az: isUndefined,
   b: __nuxt_component_2,
-  b$: onIrrelevantElement,
-  b0: loading_default,
-  b1: updateAddressById,
-  b2: addAddressByDTO,
-  b3: deleteAddressById,
-  b4: deleteBatchAddressByIds,
-  b5: updateInfoByDTO,
-  b6: updatePwdByToken,
-  b7: updatePhone,
-  b8: getUpdateNewCode,
-  b9: DeviceType,
-  bA: SeriesModel$1,
-  bB: makeInner,
-  bC: createLegacyDataSelectAction,
-  bD: createSeriesData,
-  bE: createSymbol,
-  bF: getECData,
-  bG: pointsLayout,
-  bH: SymbolDraw,
-  bI: use,
-  bJ: install$f,
-  bK: graphic,
-  bL: normalizeSymbolSize,
-  bM: retrieveVisualColorForTooltipMarker,
-  bN: createTooltipMarkup,
-  bO: Model$1,
-  bP: AxisModelCommonMixin,
-  bQ: ComponentModel$1,
-  bR: axisDefault,
-  bS: AxisBuilder,
-  bT: mergePath,
-  bU: ComponentView$1,
-  bV: Axis$1,
-  bW: IntervalScale$1,
-  bX: alignScaleTicks,
-  bY: getUID,
-  bZ: RoamController$1,
-  b_: setDefaultStateProxy,
-  ba: updateEmail,
-  bb: updateShopcart,
-  bc: ElButtonGroup,
-  bd: linearMap,
-  be: getLayoutRect,
-  bf: parsePercent,
-  bg: limitTurnAngle,
-  bh: limitSurfaceAngle,
-  bi: shiftLayoutOnY,
-  bj: getSectorCornerRadius,
-  bk: initProps,
-  bl: updateProps$1,
-  bm: saveOldStyle,
-  bn: setStatesStylesFromModel,
-  bo: toggleHoverEmphasis,
-  bp: setLabelStyle,
-  bq: getLabelStatesModels,
-  br: setLabelLineStyle,
-  bs: getLabelLineStatesModels,
-  bt: removeElementWithFadeOut,
-  bu: ChartView$1,
-  bv: prepareSeriesDataSchema,
-  bw: SeriesData,
-  bx: makeSeriesEncodeForNameBased,
-  by: getPercentSeats,
-  bz: defaultEmphasis,
+  b$: getDecalFromPalette,
+  b0: linearMap,
+  b1: getLayoutRect,
+  b2: parsePercent,
+  b3: limitTurnAngle,
+  b4: limitSurfaceAngle,
+  b5: shiftLayoutOnY,
+  b6: getSectorCornerRadius,
+  b7: initProps,
+  b8: updateProps$1,
+  b9: saveOldStyle,
+  bA: createTooltipMarkup,
+  bB: Model$1,
+  bC: AxisModelCommonMixin,
+  bD: ComponentModel$1,
+  bE: axisDefault,
+  bF: AxisBuilder,
+  bG: mergePath,
+  bH: ComponentView$1,
+  bI: Axis$1,
+  bJ: IntervalScale$1,
+  bK: alignScaleTicks,
+  bL: getUID,
+  bM: RoamController$1,
+  bN: setDefaultStateProxy,
+  bO: onIrrelevantElement,
+  bP: createOrUpdatePatternFromDecal,
+  bQ: setTooltipConfig,
+  bR: enableComponentHighDownFeatures,
+  bS: Z2_EMPHASIS_LIFT,
+  bT: setStatesFlag,
+  bU: warn,
+  bV: SINGLE_REFERRING,
+  bW: findEventDispatcher,
+  bX: Symbol$1,
+  bY: HOVER_STATE_BLUR,
+  bZ: removeElement,
+  b_: convertOptionIdName,
+  ba: setStatesStylesFromModel,
+  bb: toggleHoverEmphasis,
+  bc: setLabelStyle,
+  bd: getLabelStatesModels,
+  be: setLabelLineStyle,
+  bf: getLabelLineStatesModels,
+  bg: removeElementWithFadeOut,
+  bh: ChartView$1,
+  bi: prepareSeriesDataSchema,
+  bj: SeriesData,
+  bk: makeSeriesEncodeForNameBased,
+  bl: getPercentSeats,
+  bm: defaultEmphasis,
+  bn: SeriesModel$1,
+  bo: makeInner,
+  bp: createLegacyDataSelectAction,
+  bq: createSeriesData,
+  br: createSymbol,
+  bs: getECData,
+  bt: pointsLayout,
+  bu: SymbolDraw,
+  bv: use,
+  bw: install$f,
+  bx: graphic,
+  by: normalizeSymbolSize,
+  bz: retrieveVisualColorForTooltipMarker,
   c: createError,
-  c$: isNumeric,
-  c0: createOrUpdatePatternFromDecal,
-  c1: setTooltipConfig,
-  c2: enableComponentHighDownFeatures,
-  c3: Z2_EMPHASIS_LIFT,
-  c4: setStatesFlag,
-  c5: warn,
-  c6: SINGLE_REFERRING,
-  c7: findEventDispatcher,
-  c8: Symbol$1,
-  c9: HOVER_STATE_BLUR,
-  cA: numericToNumber,
-  cB: createOrUpdate,
-  cC: clear$1,
-  cD: createScaleByModel,
-  cE: niceScaleExtent,
-  cF: applyTransform,
-  cG: sliderMove,
-  cH: asc$1,
-  cI: BrushController$1,
-  cJ: groupTransition,
-  cK: makeRectPanelClipPath,
-  cL: makeRectIsTargetByCursor,
-  cM: makeLinearBrushOtherExtent,
-  cN: axisModelCreator,
-  cO: groupData,
-  cP: getDimensionTypeByAxis,
-  cQ: makeSeriesEncodeForAxisCoordSys,
-  cR: quantile,
-  cS: SOURCE_FORMAT_ARRAY_ROWS,
-  cT: makePrintable,
-  cU: throwError,
-  cV: createClipPath,
-  cW: createRenderPlanner,
-  cX: subPixelOptimize,
-  cY: createFloat32Array,
-  cZ: error,
-  c_: isCoordinateSystemType,
-  ca: removeElement,
-  cb: convertOptionIdName,
-  cc: getDecalFromPalette,
-  cd: normalizeToArray,
-  ce: positionElement,
-  cf: getAvailableSize,
-  cg: createTextStyle,
-  ch: makeStyleMapper,
-  ci: DataDiffer$1,
-  cj: windowOpen,
-  ck: isHighDownDispatcher,
-  cl: setAsHighDownDispatcher,
-  cm: enableHoverFocus,
-  cn: MAX_SAFE_INTEGER,
-  co: SPECIAL_STATES,
-  cp: round,
-  cq: enterEmphasis,
-  cr: leaveEmphasis,
-  cs: normalizeSymbolOffset,
-  ct: traverseElements,
-  cu: CoordinateSystemManager,
-  cv: defaultSeriesFormatTooltip,
-  cw: setCommonECData,
-  cx: setLabelValueAnimation,
-  cy: animateLabelValue,
-  cz: SausagePath,
-  d: __nuxt_component_0$1,
-  d$: _imports_0,
-  d0: getDefaultLabel,
-  d1: inheritDefaultOption,
-  d2: BaseBarSeriesModel,
-  d3: layout$2,
-  d4: createProgressiveLayout,
-  d5: ECPolygon,
-  d6: DISPLAY_STATES,
-  d7: deprecateReplaceLog,
-  d8: getAnimationConfig,
-  d9: createTextConfig,
-  dA: mappingToExists,
-  dB: copyLayoutParams,
-  dC: LOCATION_PARAMS,
-  dD: getItemVisualFromData,
-  dE: setItemVisualFromData,
-  dF: linePolygonIntersect,
-  dG: BrushTargetManager$1,
-  dH: ToolboxFeature,
-  dI: registerFeature,
-  dJ: getDataItemValue,
-  dK: DataFormatMixin,
-  dL: enableHoverEmphasis,
-  dM: TimeScale$1,
-  dN: OrdinalScale$1,
-  dO: createIcon,
-  dP: getPrecision,
-  dQ: parseDataValue,
-  dR: enterBlur,
-  dS: leaveBlur,
-  dT: getVisualFromData,
-  dU: getStackedDimension,
-  dV: normalizeCssArray,
-  dW: getTransform$1,
-  dX: compressBatches,
-  dY: transformDirection,
-  dZ: reformIntervals,
-  d_: box,
-  da: getLayoutOnAxis,
-  db: getFont,
-  dc: makePath,
-  dd: getShapeClass,
-  de: buildElStyle,
+  c$: makePath,
+  c0: normalizeToArray,
+  c1: positionElement,
+  c2: getAvailableSize,
+  c3: createTextStyle,
+  c4: makeStyleMapper,
+  c5: DataDiffer$1,
+  c6: windowOpen,
+  c7: isHighDownDispatcher,
+  c8: setAsHighDownDispatcher,
+  c9: enableHoverFocus,
+  cA: axisModelCreator,
+  cB: groupData,
+  cC: getDimensionTypeByAxis,
+  cD: makeSeriesEncodeForAxisCoordSys,
+  cE: quantile,
+  cF: SOURCE_FORMAT_ARRAY_ROWS,
+  cG: makePrintable,
+  cH: throwError,
+  cI: createClipPath,
+  cJ: createRenderPlanner,
+  cK: subPixelOptimize,
+  cL: createFloat32Array,
+  cM: error,
+  cN: isCoordinateSystemType,
+  cO: isNumeric,
+  cP: getDefaultLabel,
+  cQ: inheritDefaultOption,
+  cR: BaseBarSeriesModel,
+  cS: layout$2,
+  cT: createProgressiveLayout,
+  cU: ECPolygon,
+  cV: DISPLAY_STATES,
+  cW: deprecateReplaceLog,
+  cX: getAnimationConfig,
+  cY: createTextConfig,
+  cZ: getLayoutOnAxis,
+  c_: getFont,
+  ca: MAX_SAFE_INTEGER,
+  cb: SPECIAL_STATES,
+  cc: round,
+  cd: enterEmphasis,
+  ce: leaveEmphasis,
+  cf: normalizeSymbolOffset,
+  cg: traverseElements,
+  ch: CoordinateSystemManager,
+  ci: defaultSeriesFormatTooltip,
+  cj: setCommonECData,
+  ck: setLabelValueAnimation,
+  cl: animateLabelValue,
+  cm: SausagePath,
+  cn: numericToNumber,
+  co: createOrUpdate,
+  cp: clear$1,
+  cq: createScaleByModel,
+  cr: niceScaleExtent,
+  cs: applyTransform,
+  ct: sliderMove,
+  cu: asc$1,
+  cv: BrushController$1,
+  cw: groupTransition,
+  cx: makeRectPanelClipPath,
+  cy: makeRectIsTargetByCursor,
+  cz: makeLinearBrushOtherExtent,
+  d: __nuxt_component_2$1,
+  d$: install$3,
+  d0: getShapeClass,
+  d1: buildElStyle,
+  d2: buildLabelElOption,
+  d3: BaseAxisPointer$1,
+  d4: makeLineShape,
+  d5: makeSectorShape,
+  d6: getDataDimensionsOnAxis,
+  d7: AxisView,
+  d8: isDimensionStacked,
+  d9: install$e,
+  dA: OrdinalScale$1,
+  dB: createIcon,
+  dC: getPrecision,
+  dD: parseDataValue,
+  dE: enterBlur,
+  dF: leaveBlur,
+  dG: getVisualFromData,
+  dH: getStackedDimension,
+  dI: normalizeCssArray,
+  dJ: getTransform$1,
+  dK: compressBatches,
+  dL: transformDirection,
+  dM: reformIntervals,
+  dN: box,
+  dO: _imports_0,
+  dP: getMonthStartEnd,
+  dQ: getWalletCombo,
+  dR: RechangeType,
+  dS: addUserWallet,
+  dT: install,
+  dU: install$h,
+  dV: install$g,
+  dW: install$d,
+  dX: install$b,
+  dY: install$a,
+  dZ: install$9,
+  d_: install$6,
+  da: rectCoordAxisHandleRemove,
+  db: subPixelOptimizeLine,
+  dc: rectCoordAxisBuildSplitArea,
+  dd: buildCartesianSingleLabelElOption,
+  de: getTransformedPosition,
   default: entry$1,
-  df: buildLabelElOption,
-  dg: BaseAxisPointer$1,
-  dh: makeLineShape,
-  di: makeSectorShape,
-  dj: getDataDimensionsOnAxis,
-  dk: AxisView,
-  dl: isDimensionStacked,
-  dm: install$e,
-  dn: rectCoordAxisHandleRemove,
-  dp: subPixelOptimizeLine,
-  dq: rectCoordAxisBuildSplitArea,
-  dr: buildCartesianSingleLabelElOption,
-  ds: getTransformedPosition,
-  dt: makeRectShape,
-  du: getLayoutParams,
-  dv: sizeCalculable,
-  dw: mergeLayoutParam,
-  dx: formatTplSimple,
-  dy: getLocaleModel,
-  dz: parseDate,
+  df: makeRectShape,
+  dg: getLayoutParams,
+  dh: sizeCalculable,
+  di: mergeLayoutParam,
+  dj: formatTplSimple,
+  dk: getLocaleModel,
+  dl: parseDate,
+  dm: mappingToExists,
+  dn: copyLayoutParams,
+  dp: LOCATION_PARAMS,
+  dq: getItemVisualFromData,
+  dr: setItemVisualFromData,
+  ds: linePolygonIntersect,
+  dt: BrushTargetManager$1,
+  du: ToolboxFeature,
+  dv: registerFeature,
+  dw: getDataItemValue,
+  dx: DataFormatMixin,
+  dy: enableHoverEmphasis,
+  dz: TimeScale$1,
   e: _export_sfc,
-  e0: getMonthStartEnd,
-  e1: getWalletCombo,
-  e2: RechangeType,
-  e3: addUserWallet,
-  e4: install,
-  e5: install$h,
-  e6: install$g,
-  e7: install$d,
-  e8: install$b,
-  e9: install$a,
-  ea: install$9,
-  eb: install$6,
-  ec: install$3,
-  ed: install$5,
-  ee: install$4,
-  ef: install$2,
-  eg: install$1,
-  eh: installUniversalTransition,
-  ei: installLabelLayout,
-  ej: throttle,
-  ek: init,
-  el: addClass,
-  em: removeClass,
-  en: more_default,
+  e0: install$5,
+  e1: install$4,
+  e2: install$2,
+  e3: install$1,
+  e4: installUniversalTransition,
+  e5: installLabelLayout,
+  e6: throttle,
+  e7: init,
+  e8: withInstallDirective,
+  e9: warning_filled_default,
+  ea: componentSizeMap,
+  eb: ValidateComponentsMap,
+  ec: isElement,
+  ed: minus_default,
+  ee: BaseWSUrl,
+  ef: withInstallFunction,
+  eg: view_default,
+  eh: hide_default,
+  ei: CloseComponents,
+  ej: useGlobalConfig,
+  ek: defaultNamespace,
+  el: nuxtLinkDefaults,
+  em: useRuntimeConfig,
+  en: buildProp,
+  eo: useGetDerivedNamespace,
+  ep: useIdInjection,
+  eq: getCommPostCategoryById,
+  er: addClass,
+  es: removeClass,
+  et: more_default,
   f: ElMessageBox,
   g: ElButton,
   h: useSeoMeta,
   i: isTrue,
-  j: useNamespace,
-  k: useId,
-  l: _export_sfc$1,
-  m: buildProps,
+  j: appKeywords,
+  k: useFetch,
+  l: BaseUrl,
+  m: useHttp,
   n: navigateTo,
-  o: addUnit,
-  p: useHttp,
-  q: defineStore,
-  r: persistedState,
+  o: useSettingStore,
+  p: useColorMode,
+  q: useAsyncCopyText,
+  r: buildProps,
   s: search_default,
-  t: BaseWSUrl,
+  t: useNamespace,
   u: useUserStore,
-  v: throwError$1,
-  w: withInstall,
-  x: definePropType,
-  y: isNumber,
-  z: debugWarn
+  v: isNumber,
+  w: _export_sfc$1,
+  x: withInstall,
+  y: defineStore,
+  z: persistedState
 });
 
-export { useError as $, mutable as A, BaseUrlImg as B, full_screen_default as C, scale_to_original_default as D, ElMessage as E, ElIcon as F, close_default as G, arrow_left_default as H, arrow_right_default as I, zoom_out_default as J, zoom_in_default as K, refresh_left_default as L, refresh_right_default as M, plus_default as N, iconPropType as O, withNoopInstall as P, buttonTypes as Q, question_filled_default as R, StatusCode as S, addUnit as T, BaseUrlVideo as U, useShopStore as V, arrow_left_bold_default as W, arrow_right_bold_default as X, useHead as Y, star_filled_default as Z, __nuxt_component_0 as _, _sfc_main$2 as a, Eventful as a$, close_bold_default as a0, caret_right_default as a1, star_default as a2, useSizeProp as a3, formContextKey as a4, formItemContextKey as a5, useFormSize as a6, useFormItemInputId as a7, hasClass as a8, check_default as a9, useId as aA, useGlobalConfig as aB, defaultNamespace as aC, delete_default as aD, updateInfoByDTO as aE, getUserLeave as aF, document_default as aG, circle_check_default as aH, clock_default as aI, calendar_default as aJ, d_arrow_left_default as aK, d_arrow_right_default as aL, getStyle as aM, arrow_up_default as aN, updatePwdByToken as aO, updatePhone as aP, getUpdateNewCode as aQ, DeviceType as aR, updateEmail as aS, updateShopcart as aT, useRouter as aU, __extends as aV, isObject$2 as aW, disableUserSelect as aX, BoundingRect$1 as aY, REDRAW_BIT as aZ, each$7 as a_, shopping_cart_full_default as aa, money_default as ab, credit_card_default as ac, van_default as ad, chat_dot_square_default as ae, useAddressStore as af, useCheckXXSText as ag, circle_plus_filled_default as ah, useFormItem as ai, useFormDisabled as aj, debugWarn as ak, loading_default as al, componentSizes as am, isBoolean as an, useDeprecated as ao, throwError$1 as ap, withInstallFunction as aq, circle_close_default as ar, arrow_down_default as as, isEmpty as at, isUndefined as au, updateAddressById as av, addAddressByDTO as aw, deleteAddressById as ax, deleteBatchAddressByIds as ay, CloseComponents as az, _export_sfc as b, install$5 as b$, platformApi as b0, devicePixelRatio as b1, isGradientObject as b2, getCanvasGradient as b3, isImagePatternObject as b4, createCanvasPattern as b5, brush$1 as b6, brushSingle as b7, requestAnimationFrame$2 as b8, env as b9, translate as bA, create$1 as bB, windingLine as bC, ElButtonGroup as bD, axisDefault as bE, createHashMap as bF, mixin as bG, makeStyleMapper as bH, BezierCurve$1 as bI, inheritDefaultOption as bJ, BaseBarSeriesModel as bK, reduce as bL, TRANSFORMABLE_PROPS as bM, Axis$1 as bN, AxisModelCommonMixin as bO, DataFormatMixin as bP, use as bQ, install as bR, install$h as bS, install$g as bT, install$d as bU, install$b as bV, install$a as bW, install$e as bX, install$9 as bY, install$6 as bZ, install$3 as b_, merge as ba, logError as bb, indexOf as bc, getSize$1 as bd, extend as be, isString as bf, keys as bg, Group$1$1 as bh, Rect$1$1 as bi, hasOwn as bj, TSpan$1 as bk, Circle$1 as bl, Line$2 as bm, Ellipse$1 as bn, Polygon$1 as bo, Polyline$2 as bp, ZRImage$1 as bq, createFromString as br, LinearGradient$1 as bs, RadialGradient$1 as bt, defaults as bu, map$1 as bv, trim$1 as bw, mul as bx, rotate as by, scale$2 as bz, useSeoMeta as c, concatArray as c$, install$4 as c0, install$2 as c1, install$1 as c2, installUniversalTransition as c3, installLabelLayout as c4, throttle as c5, identity as c6, invert as c7, applyTransform$1 as c8, ZRText$1 as c9, install$f as cA, clone$4 as cB, retrieveVisualColorForTooltipMarker as cC, createTooltipMarkup as cD, isFunction as cE, Model$1 as cF, ComponentModel$1 as cG, AxisBuilder as cH, isArray as cI, Ring$1 as cJ, mergePath as cK, ComponentView$1 as cL, Z2_EMPHASIS_LIFT as cM, setStatesFlag as cN, createSymbol as cO, Transformable as cP, parsePercent as cQ, copy$1 as cR, copy as cS, retrieve2 as cT, SINGLE_REFERRING as cU, findEventDispatcher as cV, getECData as cW, RoamController$1 as cX, fromPoints as cY, onIrrelevantElement as cZ, Symbol$1 as c_, getSectorCornerRadius as ca, initProps as cb, updateProps$1 as cc, saveOldStyle as cd, setStatesStylesFromModel as ce, toggleHoverEmphasis as cf, setLabelStyle as cg, getLabelStatesModels as ch, setLabelLineStyle as ci, retrieve3 as cj, getLabelLineStatesModels as ck, Sector$1 as cl, removeElementWithFadeOut as cm, ChartView$1 as cn, makeInner as co, bind$1 as cp, curry$1 as cq, makeSeriesEncodeForNameBased as cr, getPercentSeats as cs, defaultEmphasis as ct, SeriesModel$1 as cu, createLegacyDataSelectAction as cv, createSeriesData as cw, Path as cx, pointsLayout as cy, SymbolDraw as cz, __nuxt_component_2 as d, createTextConfig as d$, HOVER_STATE_BLUR as d0, setDefaultStateProxy as d1, removeElement as d2, normalizeToArray as d3, DataDiffer$1 as d4, windowOpen as d5, normalize$1 as d6, SPECIAL_STATES as d7, round as d8, enterEmphasis as d9, makeSeriesEncodeForAxisCoordSys as dA, graphic as dB, traverseElements as dC, createClipPath as dD, createRenderPlanner as dE, subPixelOptimize as dF, createFloat32Array as dG, normalizeSymbolSize as dH, normalizeSymbolOffset as dI, clone$3 as dJ, retrieve as dK, dist$1 as dL, containStroke$4 as dM, containStroke$2 as dN, isNumber$1 as dO, isCoordinateSystemType as dP, CoordinateSystemManager as dQ, isNumeric as dR, getDefaultLabel as dS, layout$2 as dT, createProgressiveLayout as dU, ECPolygon as dV, groupData as dW, prepareSeriesDataSchema as dX, createOrUpdatePatternFromDecal as dY, normalizeRadian as dZ, DISPLAY_STATES as d_, leaveEmphasis as da, sub as db, defaultSeriesFormatTooltip as dc, SeriesData as dd, noop$1 as de, normalizeArcAngles as df, createTextStyle as dg, linearMap as dh, setCommonECData as di, setLabelValueAnimation as dj, animateLabelValue as dk, Point$1 as dl, numericToNumber as dm, eqNaN as dn, createOrUpdate as dp, clear$1 as dq, filter as dr, asc$1 as ds, BrushController$1 as dt, groupTransition as du, makeRectPanelClipPath as dv, makeRectIsTargetByCursor as dw, makeLinearBrushOtherExtent as dx, axisModelCreator as dy, getDimensionTypeByAxis as dz, __nuxt_component_0$1 as e, clone$2 as e$, getLayoutOnAxis as e0, getFont as e1, buildElStyle as e2, buildLabelElOption as e3, BaseAxisPointer$1 as e4, applyTransform as e5, makeLineShape as e6, makeSectorShape as e7, getBoundingRect as e8, AxisView as e9, createIcon as eA, enterBlur as eB, leaveBlur as eC, getVisualFromData as eD, modifyAlpha as eE, normalizeCssArray as eF, stop as eG, setAsHighDownDispatcher as eH, sliderMove as eI, getTransform$1 as eJ, compressBatches as eK, transformDirection as eL, reformIntervals as eM, box as eN, _imports_0 as eO, getMonthStartEnd as eP, init as eQ, min$1 as eR, max$1 as eS, limitTurnAngle as eT, limitSurfaceAngle as eU, find as eV, getDecalFromPalette as eW, isHighDownDispatcher as eX, enableHoverFocus as eY, normalizeCssArray$1 as eZ, modifyHSL as e_, rectCoordAxisHandleRemove as ea, subPixelOptimizeLine as eb, rectCoordAxisBuildSplitArea as ec, buildCartesianSingleLabelElOption as ed, getTransformedPosition as ee, makeRectShape as ef, getLayoutParams as eg, sizeCalculable as eh, mergeLayoutParam as ei, formatTplSimple as ej, getLocaleModel as ek, mappingToExists as el, convertOptionIdName as em, setTooltipConfig as en, positionElement as eo, getShapeClass as ep, Displayable$1 as eq, LOCATION_PARAMS as er, ToolboxFeature as es, getDataItemValue as et, enableHoverEmphasis as eu, parsePercent$1 as ev, IntervalScale$1 as ew, TimeScale$1 as ex, OrdinalScale$1 as ey, getLayoutRect as ez, ElMessageBox as f, useNuxtApp as f$, scale$1 as f0, scaleAndAdd as f1, SausagePath as f2, SOURCE_FORMAT_ARRAY_ROWS as f3, throwError as f4, quadraticAt as f5, quadraticDerivativeAt as f6, mergeAll as f7, cloneValue as f8, isArrayLike as f9, stringify as fA, parse as fB, warn as fC, MAX_SAFE_INTEGER as fD, distSquare as fE, getDataDimensionsOnAxis as fF, niceScaleExtent as fG, createScaleByModel as fH, getItemVisualFromData as fI, setItemVisualFromData as fJ, linePolygonIntersect as fK, CompoundPath_js as fL, useState as fM, withInstallDirective as fN, warning_filled_default as fO, ValidateComponentsMap as fP, minus_default as fQ, view_default as fR, hide_default as fS, BaseWSUrl as fT, nuxtLinkDefaults as fU, useRuntimeConfig as fV, buildProp as fW, useGetDerivedNamespace as fX, useIdInjection as fY, isElement as fZ, asyncDataDefaults as f_, getAnimationConfig as fa, makePath as fb, isDimensionStacked as fc, parseDate as fd, copyLayoutParams as fe, BrushTargetManager$1 as ff, getPrecision as fg, getStackedDimension as fh, parseDataValue as fi, getWalletCombo as fj, RechangeType as fk, addUserWallet as fl, alignScaleTicks as fm, assert as fn, create as fo, len as fp, set$1 as fq, quadraticSubdivide as fr, quantile as fs, lift as ft, registerFeature as fu, shiftLayoutOnY as fv, getUID as fw, enableComponentHighDownFeatures as fx, getAvailableSize as fy, fastLerp as fz, ElButton as g, createError as g0, fetchDefaults as g1, useRequestFetch as g2, more_default as g3, addClass as g4, removeClass as g5, server as g6, buildProps as h, isTrue as i, useNamespace as j, isNumber as k, _export_sfc$1 as l, useAsyncCopyText as m, navigateTo as n, BaseUrl as o, useHttp as p, defineStore as q, persistedState as r, search_default as s, useRoute as t, useUserStore as u, appName as v, withInstall as w, clearError as x, compareObjects as y, definePropType as z };
+export { addUnit as $, useRoute as A, BaseUrlImg as B, getCommCategoryById as C, appName as D, ElMessage as E, clearError as F, compareObjects as G, getCommCategoryList as H, definePropType as I, mutable as J, full_screen_default as K, scale_to_original_default as L, ElIcon as M, close_default as N, arrow_left_default as O, arrow_right_default as P, zoom_out_default as Q, zoom_in_default as R, StatusCode as S, refresh_left_default as T, refresh_right_default as U, plus_default as V, iconPropType as W, withNoopInstall as X, buttonTypes as Y, question_filled_default as Z, __nuxt_component_0 as _, _sfc_main$2 as a, isObject$2 as a$, BaseUrlVideo as a0, useShopStore as a1, useAsyncData as a2, arrow_left_bold_default as a3, arrow_right_bold_default as a4, useHead as a5, useError as a6, star_filled_default as a7, close_bold_default as a8, caret_right_default as a9, isUndefined as aA, updateAddressById as aB, addAddressByDTO as aC, deleteAddressById as aD, deleteBatchAddressByIds as aE, useId as aF, delete_default as aG, updateInfoByDTO as aH, getUserLeave as aI, document_default as aJ, circle_check_default as aK, clock_default as aL, calendar_default as aM, d_arrow_left_default as aN, d_arrow_right_default as aO, getStyle as aP, arrow_up_default as aQ, getCommCategory as aR, componentSizes as aS, updatePwdByToken as aT, updatePhone as aU, getUpdateNewCode as aV, DeviceType as aW, updateEmail as aX, updateShopcart as aY, useRouter as aZ, __extends as a_, star_default as aa, useSizeProp as ab, formContextKey as ac, formItemContextKey as ad, useFormSize as ae, useFormItemInputId as af, hasClass as ag, check_default as ah, shopping_cart_full_default as ai, money_default as aj, credit_card_default as ak, van_default as al, chat_dot_square_default as am, useAddressStore as an, useCheckXXSText as ao, circle_plus_filled_default as ap, useFormItem as aq, useFormDisabled as ar, debugWarn as as, loading_default as at, isBoolean as au, useDeprecated as av, throwError$1 as aw, circle_close_default as ax, arrow_down_default as ay, isEmpty as az, _export_sfc as b, install$a as b$, disableUserSelect as b0, BoundingRect$1 as b1, REDRAW_BIT as b2, each$7 as b3, Eventful as b4, platformApi as b5, devicePixelRatio as b6, isGradientObject as b7, getCanvasGradient as b8, isImagePatternObject as b9, map$1 as bA, trim$1 as bB, mul as bC, rotate as bD, scale$2 as bE, translate as bF, create$1 as bG, windingLine as bH, ElButtonGroup as bI, axisDefault as bJ, createHashMap as bK, mixin as bL, makeStyleMapper as bM, BezierCurve$1 as bN, inheritDefaultOption as bO, BaseBarSeriesModel as bP, reduce as bQ, TRANSFORMABLE_PROPS as bR, Axis$1 as bS, AxisModelCommonMixin as bT, DataFormatMixin as bU, use as bV, install as bW, install$h as bX, install$g as bY, install$d as bZ, install$b as b_, createCanvasPattern as ba, brush$1 as bb, brushSingle as bc, requestAnimationFrame$2 as bd, env as be, merge as bf, logError as bg, indexOf as bh, getSize$1 as bi, extend as bj, isString as bk, keys as bl, Group$1$1 as bm, Rect$1$1 as bn, hasOwn as bo, TSpan$1 as bp, Circle$1 as bq, Line$2 as br, Ellipse$1 as bs, Polygon$1 as bt, Polyline$2 as bu, ZRImage$1 as bv, createFromString as bw, LinearGradient$1 as bx, RadialGradient$1 as by, defaults as bz, useSeoMeta as c, getECData as c$, install$e as c0, install$9 as c1, install$6 as c2, install$3 as c3, install$5 as c4, install$4 as c5, install$2 as c6, install$1 as c7, installUniversalTransition as c8, installLabelLayout as c9, createLegacyDataSelectAction as cA, createSeriesData as cB, Path as cC, pointsLayout as cD, SymbolDraw as cE, install$f as cF, clone$4 as cG, retrieveVisualColorForTooltipMarker as cH, createTooltipMarkup as cI, isFunction as cJ, Model$1 as cK, ComponentModel$1 as cL, AxisBuilder as cM, isArray as cN, Ring$1 as cO, mergePath as cP, ComponentView$1 as cQ, Z2_EMPHASIS_LIFT as cR, setStatesFlag as cS, createSymbol as cT, Transformable as cU, parsePercent as cV, copy$1 as cW, copy as cX, retrieve2 as cY, SINGLE_REFERRING as cZ, findEventDispatcher as c_, throttle as ca, identity as cb, invert as cc, applyTransform$1 as cd, ZRText$1 as ce, getSectorCornerRadius as cf, initProps as cg, updateProps$1 as ch, saveOldStyle as ci, setStatesStylesFromModel as cj, toggleHoverEmphasis as ck, setLabelStyle as cl, getLabelStatesModels as cm, setLabelLineStyle as cn, retrieve3 as co, getLabelLineStatesModels as cp, Sector$1 as cq, removeElementWithFadeOut as cr, ChartView$1 as cs, makeInner as ct, bind$1 as cu, curry$1 as cv, makeSeriesEncodeForNameBased as cw, getPercentSeats as cx, defaultEmphasis as cy, SeriesModel$1 as cz, appKeywords as d, groupData as d$, RoamController$1 as d0, fromPoints as d1, onIrrelevantElement as d2, Symbol$1 as d3, concatArray as d4, HOVER_STATE_BLUR as d5, setDefaultStateProxy as d6, removeElement as d7, normalizeToArray as d8, DataDiffer$1 as d9, makeRectPanelClipPath as dA, makeRectIsTargetByCursor as dB, makeLinearBrushOtherExtent as dC, axisModelCreator as dD, getDimensionTypeByAxis as dE, makeSeriesEncodeForAxisCoordSys as dF, graphic as dG, traverseElements as dH, createClipPath as dI, createRenderPlanner as dJ, subPixelOptimize as dK, createFloat32Array as dL, normalizeSymbolSize as dM, normalizeSymbolOffset as dN, clone$3 as dO, retrieve as dP, dist$1 as dQ, containStroke$4 as dR, containStroke$2 as dS, isNumber$1 as dT, isCoordinateSystemType as dU, CoordinateSystemManager as dV, isNumeric as dW, getDefaultLabel as dX, layout$2 as dY, createProgressiveLayout as dZ, ECPolygon as d_, windowOpen as da, normalize$1 as db, SPECIAL_STATES as dc, round as dd, enterEmphasis as de, leaveEmphasis as df, sub as dg, defaultSeriesFormatTooltip as dh, SeriesData as di, noop$1 as dj, normalizeArcAngles as dk, createTextStyle as dl, linearMap as dm, setCommonECData as dn, setLabelValueAnimation as dp, animateLabelValue as dq, Point$1 as dr, numericToNumber as ds, eqNaN as dt, createOrUpdate as du, clear$1 as dv, filter as dw, asc$1 as dx, BrushController$1 as dy, groupTransition as dz, __nuxt_component_2 as e, getDecalFromPalette as e$, prepareSeriesDataSchema as e0, createOrUpdatePatternFromDecal as e1, normalizeRadian as e2, DISPLAY_STATES as e3, createTextConfig as e4, getLayoutOnAxis as e5, getFont as e6, buildElStyle as e7, buildLabelElOption as e8, BaseAxisPointer$1 as e9, parsePercent$1 as eA, IntervalScale$1 as eB, TimeScale$1 as eC, OrdinalScale$1 as eD, getLayoutRect as eE, createIcon as eF, enterBlur as eG, leaveBlur as eH, getVisualFromData as eI, modifyAlpha as eJ, normalizeCssArray as eK, stop as eL, setAsHighDownDispatcher as eM, sliderMove as eN, getTransform$1 as eO, compressBatches as eP, transformDirection as eQ, reformIntervals as eR, box as eS, _imports_0 as eT, getMonthStartEnd as eU, init as eV, min$1 as eW, max$1 as eX, limitTurnAngle as eY, limitSurfaceAngle as eZ, find as e_, applyTransform as ea, makeLineShape as eb, makeSectorShape as ec, getBoundingRect as ed, AxisView as ee, rectCoordAxisHandleRemove as ef, subPixelOptimizeLine as eg, rectCoordAxisBuildSplitArea as eh, buildCartesianSingleLabelElOption as ei, getTransformedPosition as ej, makeRectShape as ek, getLayoutParams as el, sizeCalculable as em, mergeLayoutParam as en, formatTplSimple as eo, getLocaleModel as ep, mappingToExists as eq, convertOptionIdName as er, setTooltipConfig as es, positionElement as et, getShapeClass as eu, Displayable$1 as ev, LOCATION_PARAMS as ew, ToolboxFeature as ex, getDataItemValue as ey, enableHoverEmphasis as ez, __nuxt_component_2$1 as f, CloseComponents as f$, isHighDownDispatcher as f0, enableHoverFocus as f1, normalizeCssArray$1 as f2, modifyHSL as f3, clone$2 as f4, scale$1 as f5, scaleAndAdd as f6, SausagePath as f7, SOURCE_FORMAT_ARRAY_ROWS as f8, throwError as f9, shiftLayoutOnY as fA, getUID as fB, enableComponentHighDownFeatures as fC, getAvailableSize as fD, fastLerp as fE, stringify as fF, parse as fG, warn as fH, MAX_SAFE_INTEGER as fI, distSquare as fJ, getDataDimensionsOnAxis as fK, niceScaleExtent as fL, createScaleByModel as fM, getItemVisualFromData as fN, setItemVisualFromData as fO, linePolygonIntersect as fP, CompoundPath_js as fQ, withInstallDirective as fR, warning_filled_default as fS, ValidateComponentsMap as fT, componentSizeMap as fU, isElement as fV, minus_default as fW, view_default as fX, hide_default as fY, BaseWSUrl as fZ, withInstallFunction as f_, quadraticAt as fa, quadraticDerivativeAt as fb, mergeAll as fc, cloneValue as fd, isArrayLike as fe, getAnimationConfig as ff, makePath as fg, isDimensionStacked as fh, parseDate as fi, copyLayoutParams as fj, BrushTargetManager$1 as fk, getPrecision as fl, getStackedDimension as fm, parseDataValue as fn, getWalletCombo as fo, RechangeType as fp, addUserWallet as fq, alignScaleTicks as fr, assert as fs, create as ft, len as fu, set$1 as fv, quadraticSubdivide as fw, quantile as fx, lift as fy, registerFeature as fz, ElMessageBox as g, useGlobalConfig as g0, defaultNamespace as g1, nuxtLinkDefaults as g2, useRuntimeConfig as g3, buildProp as g4, useGetDerivedNamespace as g5, useIdInjection as g6, createError as g7, getCommPostCategoryById as g8, more_default as g9, addClass as ga, removeClass as gb, server as gc, ElButton as h, isTrue as i, useHttp as j, useSettingStore as k, useColorMode as l, useFetch as m, navigateTo as n, BaseUrl as o, useAsyncCopyText as p, buildProps as q, useNamespace as r, search_default as s, isNumber as t, useUserStore as u, defineStore as v, withInstall as w, persistedState as x, _export_sfc$1 as y, useModeToggle as z };
 //# sourceMappingURL=server.mjs.map

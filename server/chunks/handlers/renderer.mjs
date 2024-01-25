@@ -37,6 +37,18 @@ function defineRenderHandler(handler) {
   });
 }
 
+function buildAssetsDir() {
+  return useRuntimeConfig().app.buildAssetsDir;
+}
+function buildAssetsURL(...path) {
+  return joinURL(publicAssetsURL(), buildAssetsDir(), ...path);
+}
+function publicAssetsURL(...path) {
+  const app = useRuntimeConfig().app;
+  const publicBase = app.cdnURL || app.baseURL;
+  return path.length ? joinURL(publicBase, ...path) : publicBase;
+}
+
 const Vue3 = version.startsWith("3");
 
 function resolveUnref(r) {
@@ -99,28 +111,10 @@ const appRootId = "__nuxt";
 
 const appRootTag = "div";
 
-function buildAssetsDir() {
-  return useRuntimeConfig().app.buildAssetsDir;
-}
-function buildAssetsURL(...path) {
-  return joinURL(publicAssetsURL(), buildAssetsDir(), ...path);
-}
-function publicAssetsURL(...path) {
-  const app = useRuntimeConfig().app;
-  const publicBase = app.cdnURL || app.baseURL;
-  return path.length ? joinURL(publicBase, ...path) : publicBase;
-}
-
 globalThis.__buildAssetsURL = buildAssetsURL;
 globalThis.__publicAssetsURL = publicAssetsURL;
 const getClientManifest = () => import('../app/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
-const getEntryIds = () => getClientManifest().then((r) => Object.values(r).filter(
-  (r2) => (
-    // @ts-expect-error internal key set by CSS inlining configuration
-    r2._globalCSS
-  )
-).map((r2) => r2.src));
-const getServerEntry = () => import('../app/server.mjs').then(function (n) { return n.g6; }).then((r) => r.default || r);
+const getServerEntry = () => import('../app/server.mjs').then(function (n) { return n.gc; }).then((r) => r.default || r);
 const getSSRStyles = lazyCachedFunction(() => import('../app/styles.mjs').then((r) => r.default || r));
 const getSSRRenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();
@@ -255,15 +249,7 @@ const renderer = defineRenderHandler(async (event) => {
     const response2 = renderPayloadResponse(ssrContext);
     return response2;
   }
-  if (!isRenderingIsland) {
-    const source = ssrContext.modules ?? ssrContext._registeredComponents;
-    if (source) {
-      for (const id of await getEntryIds()) {
-        source.add(id);
-      }
-    }
-  }
-  const inlinedStyles = await renderInlineStyles(ssrContext.modules ?? ssrContext._registeredComponents ?? []) ;
+  const inlinedStyles = isRenderingIsland ? await renderInlineStyles(ssrContext.modules ?? ssrContext._registeredComponents ?? []) : [];
   const NO_SCRIPTS = routeOptions.experimentalNoScripts;
   const { styles, scripts } = getRequestDependencies(ssrContext, renderer.rendererContext);
   head.push({ style: inlinedStyles });

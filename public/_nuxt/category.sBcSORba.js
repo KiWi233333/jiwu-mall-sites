@@ -1,1 +1,0 @@
-import{u as r}from"./fetch.3IR0ILJ_.js";import{o,t as e}from"./entry.HuYbGiLS.js";function n(){return r(()=>`${e}/community/category/tree`,"$KmVHAG10kk")}function g(){return o.get(`${e}/community/category/list`)}function u(t){return o.get(`/community/category/post/${t}`)}function c(t){return o.get(`/community/category/one/${t}`)}export{g as a,n as b,u as c,c as g};
