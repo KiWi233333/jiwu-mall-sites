@@ -54,13 +54,13 @@
 node ./server/index.mjs
 ```
 
-### ✨ 开发
+### ✨ 开发 <small>（跳过）</small>
 
 ```sh
 pnpm run dev
 ```
 
-### 📦 打包
+### 📦 打包 <small>（跳过）</small>
 
 ```sh
 pnpm run build
