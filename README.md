@@ -15,20 +15,37 @@
 [<img src="./public/images/logo/logo.png" width = "20" height = "20" alt="图片名称" align=center /> 极物圈 —— 体验入口](https://jiwu.netlify.app)
 
 ###  项目截图
-
+> 主页 Home
+ 
 ![主页](./.doc/home.png)
+
+> 全局夜间模式 Light / Dark
 
 ![暗黑](./.doc/index_dark.png)
 
+> 商城购物 Mall
 ![商品](./.doc/goods.png)
 
+> 钱包 Wallet
+
 ![钱包](./.doc/wallet.png)
+
+
+> 社区 Community
+
+![社区](./.doc/comm.png)
+![社区](./.doc/comm2.png)
+
+> 聊天 Chat
 
 ![聊天](./.doc/chat.png)
 
 ![聊天](./.doc/chat1.png)
 
+> 聊天好友 ChatFriend
+
 ![聊天 - 好友](./.doc/chat2.png)
+
 
 ## ⏳ 起步 | Project Setup  
 
