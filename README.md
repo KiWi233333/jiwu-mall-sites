@@ -1,6 +1,12 @@
-<h2 align=center margin="10em" style="margin:4em;letter-spacing:0.3em;">
-<img src="./public/images/logo/logo.png" width = "40" height = "40" alt="图片名称" align=center />
-极  物  圈  </h2>
+<h1 align=center margin="10em" style="margin:2em;letter-spacing:0.3em;">
+<img src="./.doc/logo.png" width = "50" height = "50" alt="极物圈" align=center />
+极物圈</h1>
+
+<!-- <h2  align=center >
+<img src="./.doc/logo.png"  width = "40" style="margin:auto;" alt="图片名称" align=center />
+极  物  圈 
+</h2> -->
+
 
 ###  介绍
 极物圈是一个综合性平台，集商城和社交功能于一体。在这个平台上，用户可以轻松购买虚拟商品，并且可以发布个人帖子，与他人互动，进行评论等。该平台注重用户体验，为用户提供了一个在你圈子交流、好物推荐、分享和购物的多功能环境。
@@ -11,8 +17,12 @@
 基于Nuxt3 + element-plus + pinia 基本框架
 ```
 
-###  体验
-[<img src="./public/images/logo/logo.png" width = "20" height = "20" alt="图片名称" align=center /> 极物圈 —— 体验入口](https://jiwu.netlify.app)
+###  体验 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7d6db5a2-62e6-4fbc-bf1e-711b5f149060/deploy-status)](https://app.netlify.com/sites/jiwu/deploys)
+
+[<img src="./.doc/logo.png" width = "22" height = "22" alt="图片名称" align=center /> 极物圈 —— 体验入口 netlify](https://jiwu.netlify.app)
+
+
 
 ###  项目截图
 > 主页 Home
@@ -45,6 +55,11 @@
 > 聊天好友 ChatFriend
 
 ![聊天 - 好友](./.doc/chat2.png)
+
+> 全局移动端简易适配
+
+![聊天 - 移动端](./.doc/image.png)
+
 
 
 ## ⏳ 起步 | Project Setup  
