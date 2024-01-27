@@ -1,5 +1,0 @@
-# robots.txt generated at https://www.sojson.com/robots/
-Disallow:https://jiwu.kiwi2333.top/
-Disallow:/
-User-agent: *
-Disallow:

@@ -1,1 +1,0 @@
-import{ad as t,ae as n}from"./entry.t-rqPOs0.js";function o(){return t(()=>`${n}/event/list`,"$xvkmTfuJqN")}function u(e){return t(()=>`${n}/event/info/${e}`,"$RCOJD6duVz")}function r(e){return t(()=>`${n}/event/goods/sku/${e}`,"$T6xeGbxDlZ")}export{r as a,o as b,u as g};

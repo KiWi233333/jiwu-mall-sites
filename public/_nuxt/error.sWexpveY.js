@@ -1,1 +1,0 @@
-import{f as r}from"./entry.t-rqPOs0.js";import{O as o,P as t,X as c}from"./swiper-vue.Dj7aAS3P.js";const s={},n={"mx-a":"","h-100vh":"","w-full":"","flex-row-c-c":""};function a(e,f){return o(),t("main",n,[c(e.$slots,"default")])}const m=r(s,[["render",a]]);export{m as default};
