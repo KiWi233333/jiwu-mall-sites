@@ -2,12 +2,6 @@
 <img src="./.doc/logo.png" width = "50" height = "50" alt="极物圈" align=center />
 极物圈</h1>
 
-<!-- <h2  align=center >
-<img src="./.doc/logo.png"  width = "40" style="margin:auto;" alt="图片名称" align=center />
-极  物  圈 
-</h2> -->
-
-
 ###  介绍
 极物圈是一个综合性平台，集商城和社交功能于一体。在这个平台上，用户可以轻松购买虚拟商品，并且可以发布个人帖子，与他人互动，进行评论等。该平台注重用户体验，为用户提供了一个在你圈子交流、好物推荐、分享和购物的多功能环境。
   （该版本不是源代码仓库，只有部署代码！！！）
