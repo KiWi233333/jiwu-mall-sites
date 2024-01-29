@@ -12,7 +12,7 @@
 ```
 
 ###  体验 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/7d6db5a2-62e6-4fbc-bf1e-711b5f149060/deploy-status)](https://app.netlify.com/sites/jiwu/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/757656c2-792c-4a4c-86a2-ae05118b2e48/deploy-status)](https://app.netlify.com/sites/jiwu/deploys)
 
 [<img src="./.doc/logo.png" width = "22" height = "22" alt="图片名称" align=center /> 极物圈 —— 体验入口 netlify](https://jiwu.netlify.app)
 
