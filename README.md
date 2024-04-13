@@ -4,15 +4,16 @@
 
 ###  介绍
 极物圈是一个综合性平台，集商城和社交功能于一体。在这个平台上，用户可以轻松购买虚拟商品，并且可以发布个人帖子，与他人互动，进行评论等。该平台注重用户体验，为用户提供了一个在你圈子交流、好物推荐、分享和购物的多功能环境。
-  （该版本不是源代码仓库，只有部署代码！！！）
+  （该版本不是源代码仓库，只有部署代码！！！只适合参考互相学习）
+
 ###  技术
 
 ```
-基于Nuxt3 + element-plus + pinia 基本框架
+基于Nuxt3 + Element-plus + pinia 基本框架
 ```
 
 ###  体验 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/757656c2-792c-4a4c-86a2-ae05118b2e48/deploy-status)](https://app.netlify.com/sites/jiwu/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a1fa4fb4-82dc-4fef-9e1b-b06aa2463686/deploy-status)](https://app.netlify.com/sites/jiwu/deploys)
 
 [<img src="./.doc/logo.png" width = "22" height = "22" alt="图片名称" align=center /> 极物圈 —— 体验入口 netlify](https://jiwu.netlify.app)
 
