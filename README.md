@@ -57,6 +57,10 @@
 ![聊天 - 移动端](./.doc/image.png)
 
 
+### 性能优化（首屏）
+
+![首页优化](./.doc/speed.png)
+
 
 ## ⏳ 起步 | Project Setup  
 
