@@ -4,6 +4,7 @@
  </h1>
  <h1 align=center style="font-size: 24px;">极物圈</h1>
 
+[🎉 Tauri JiwuChat App](https://github.com/KiWi233333/jiwu-mall-chat-tauri)
 <div>
       <a href="https://github.com/Kiwi233333/jiwu-mall-web" target="_blank">
         <img class="disabled-img-view" src="https://img.shields.io/badge/Github-项目地址-blueviolet.svg?style=plasticr">
