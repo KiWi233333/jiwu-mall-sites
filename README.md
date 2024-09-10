@@ -6,23 +6,23 @@
 
 [🎉 Tauri JiwuChat App](https://github.com/KiWi233333/jiwu-mall-chat-tauri)
 <div>
-      <a href="https://github.com/Kiwi233333/jiwu-mall-web" target="_blank">
+      <a href="https://github.com/Kiwi233333/jiwu-mall-sites" target="_blank">
         <img class="disabled-img-view" src="https://img.shields.io/badge/Github-项目地址-blueviolet.svg?style=plasticr">
       </a>
-      <a href="https://github.com/Kiwi233333/jiwu-mall-web/stargazers" target="_blank">
+      <a href="https://github.com/Kiwi233333/jiwu-mall-sites/stargazers" target="_blank">
         <img class="disabled-img-view" alt="License"
-          src="https://img.shields.io/github/stars/Kiwi233333/jiwu-mall-web.svg?style=social">
+          src="https://img.shields.io/github/stars/Kiwi233333/jiwu-mall-sites.svg?style=social">
       </a>
     </div>
     <div >
-      <a href="https://github.com/Kiwi233333/jiwu-mall-web/commits" target="_blank">
+      <a href="https://github.com/Kiwi233333/jiwu-mall-sites/commits" target="_blank">
         <img class="disabled-img-view" alt="Commit"
-          src="https://img.shields.io/github/commit-activity/m/Kiwi233333/jiwu-mall-web">
+          src="https://img.shields.io/github/commit-activity/m/Kiwi233333/jiwu-mall-sites">
       </a>
-      <a href="https://github.com/Kiwi233333/jiwu-mall-web/issues" target="_blank">
-        <img class="disabled-img-view" alt="Issues" src="https://img.shields.io/github/issues/Kiwi233333/jiwu-mall-web">
+      <a href="https://github.com/Kiwi233333/jiwu-mall-sites/issues" target="_blank">
+        <img class="disabled-img-view" alt="Issues" src="https://img.shields.io/github/issues/Kiwi233333/jiwu-mall-sites">
       </a>
-      <a href="https://github.com/Kiwi233333/jiwu-mall-web/blob/master/LICENSE" target="_blank">
+      <a href="https://github.com/Kiwi233333/jiwu-mall-sites/blob/master/LICENSE" target="_blank">
         <img class="disabled-img-view" alt="License: Apache-2.0"
           src="https://img.shields.io/badge/License-Apache--2.0-blue.svg">
       </a>
