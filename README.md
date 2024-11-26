@@ -139,3 +139,10 @@ pnpm config set registry https://registry.npm.taobao.org
 ```sh
 pnpm config set registry https://registry.npmjs.org
 ```
+
+
+## 💬 联系
+
+- QQ:  1329634286
+
+- 邮箱:  kiwi2333@qq.com
